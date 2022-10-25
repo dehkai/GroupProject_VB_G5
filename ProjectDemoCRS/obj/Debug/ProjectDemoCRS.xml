@@ -1,0 +1,36 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ProjectDemoCRS
+</name>
+</assembly>
+<members>
+<member name="T:ProjectDemoCRS.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:ProjectDemoCRS.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:ProjectDemoCRS.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:ProjectDemoCRS.My.Resources.Resources.databaseConnectionPath">
+<summary>
+  Looks up a localized string similar to Provider=Microsoft.ACE.OLEDB.12.0;Data Source=.
+</summary>
+</member>
+<member name="P:ProjectDemoCRS.My.Resources.Resources.databaseName">
+<summary>
+  Looks up a localized string similar to \ihsanTuitionCenterDb.accdb.
+</summary>
+</member>
+</members>
+</doc>

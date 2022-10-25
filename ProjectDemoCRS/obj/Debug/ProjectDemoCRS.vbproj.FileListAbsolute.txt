@@ -1,0 +1,67 @@
+C:\UTM\SEM I20212022\DDWC2653 VBNetLabDemo\DemoProject\ProjectDemoCRS\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.exe.config
+C:\UTM\SEM I20212022\DDWC2653 VBNetLabDemo\DemoProject\ProjectDemoCRS\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.exe
+C:\UTM\SEM I20212022\DDWC2653 VBNetLabDemo\DemoProject\ProjectDemoCRS\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.pdb
+C:\UTM\SEM I20212022\DDWC2653 VBNetLabDemo\DemoProject\ProjectDemoCRS\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.xml
+C:\UTM\SEM I20212022\DDWC2653 VBNetLabDemo\DemoProject\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.AssemblyReference.cache
+C:\UTM\SEM I20212022\DDWC2653 VBNetLabDemo\DemoProject\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.LoginForm.resources
+C:\UTM\SEM I20212022\DDWC2653 VBNetLabDemo\DemoProject\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.Resources.resources
+C:\UTM\SEM I20212022\DDWC2653 VBNetLabDemo\DemoProject\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.GenerateResource.cache
+C:\UTM\SEM I20212022\DDWC2653 VBNetLabDemo\DemoProject\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.CoreCompileInputs.cache
+C:\UTM\SEM I20212022\DDWC2653 VBNetLabDemo\DemoProject\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.exe
+C:\UTM\SEM I20212022\DDWC2653 VBNetLabDemo\DemoProject\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.xml
+C:\UTM\SEM I20212022\DDWC2653 VBNetLabDemo\DemoProject\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.pdb
+C:\UTM\SEM I20212022\DDWC2653 VBNetLabDemo\DemoProject\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.CrsMainForm.resources
+C:\UTM\SEM I20212022\DDWC2653 VBNetLabDemo\DemoProject\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.FormTestStudentGroup.resources
+C:\UTM\SEM I20212022\DDWC2653 VBNetLabDemo\DemoProject\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentGroupListForm.resources
+C:\UTM\SEM I20212022\DDWC2653 VBNetLabDemo\DemoProject\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentGroupForm.resources
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.exe.config
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.exe
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.pdb
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.xml
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.AssemblyReference.cache
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.CrsMainForm.resources
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.LoginForm.resources
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.Resources.resources
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.FormTestStudentGroup.resources
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentGroupForm.resources
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentGroupListForm.resources
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.GenerateResource.cache
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.CoreCompileInputs.cache
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.exe
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.xml
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.pdb
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentListForm.resources
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS1.1\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.exe.config
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS1.1\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.exe
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS1.1\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.pdb
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS1.1\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.xml
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.AssemblyReference.cache
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.CrsMainForm.resources
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.LoginForm.resources
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.Resources.resources
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentGroupForm.resources
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentGroupListForm.resources
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentListForm.resources
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.GenerateResource.cache
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.CoreCompileInputs.cache
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.exe
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.xml
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.pdb
+C:\UTM\SEM I20212022\DDWC2653 VB.NET PROGRAMMING S39 SEM 1 2021\2021_GROUP PROJECT\ProjetDemoPlatformWithoutCrystalReport\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentForm.resources
+D:\UTMSPACE\DDWD2653 VB.NET 2022\Assessment\Group Project\ProjectDemoCRS1.1\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.exe.config
+D:\UTMSPACE\DDWD2653 VB.NET 2022\Assessment\Group Project\ProjectDemoCRS1.1\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.exe
+D:\UTMSPACE\DDWD2653 VB.NET 2022\Assessment\Group Project\ProjectDemoCRS1.1\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.pdb
+D:\UTMSPACE\DDWD2653 VB.NET 2022\Assessment\Group Project\ProjectDemoCRS1.1\ProjectDemoCRS\bin\Debug\ProjectDemoCRS.xml
+D:\UTMSPACE\DDWD2653 VB.NET 2022\Assessment\Group Project\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.AssemblyReference.cache
+D:\UTMSPACE\DDWD2653 VB.NET 2022\Assessment\Group Project\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.CrsMainForm.resources
+D:\UTMSPACE\DDWD2653 VB.NET 2022\Assessment\Group Project\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.LoginForm.resources
+D:\UTMSPACE\DDWD2653 VB.NET 2022\Assessment\Group Project\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.Resources.resources
+D:\UTMSPACE\DDWD2653 VB.NET 2022\Assessment\Group Project\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentGroupForm.resources
+D:\UTMSPACE\DDWD2653 VB.NET 2022\Assessment\Group Project\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentGroupListForm.resources
+D:\UTMSPACE\DDWD2653 VB.NET 2022\Assessment\Group Project\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentForm.resources
+D:\UTMSPACE\DDWD2653 VB.NET 2022\Assessment\Group Project\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentListForm.resources
+D:\UTMSPACE\DDWD2653 VB.NET 2022\Assessment\Group Project\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.GenerateResource.cache
+D:\UTMSPACE\DDWD2653 VB.NET 2022\Assessment\Group Project\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.CoreCompileInputs.cache
+D:\UTMSPACE\DDWD2653 VB.NET 2022\Assessment\Group Project\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.exe
+D:\UTMSPACE\DDWD2653 VB.NET 2022\Assessment\Group Project\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.xml
+D:\UTMSPACE\DDWD2653 VB.NET 2022\Assessment\Group Project\ProjectDemoCRS1.1\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.pdb
