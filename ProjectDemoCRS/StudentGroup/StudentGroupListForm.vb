@@ -7,6 +7,8 @@ Public Class StudentGroupListForm
     Dim sqlString As String
     Dim mstudentGroupId As String
     Dim studentGroupClass As New StudentGroupClass
+    'Asdasdjuasyiuqwekjqsdeiuqweyquweuiqwejqwueiqeiuyw
+
     Private Sub StudentGroupForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         disableButton()
         'you can use multiple option in connecting to the database - the following are 3 example to set the connection string
