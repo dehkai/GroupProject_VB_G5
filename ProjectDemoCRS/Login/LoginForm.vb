@@ -22,10 +22,13 @@ Public Class LoginForm
 
         user = New UserClass()
         loginModel = New LoginModel
-        loginModel.createConnection()
     End Sub
 
     Private Sub UsernameTextBox_TextChanged(sender As Object, e As EventArgs) Handles UsernameTextBox.TextChanged
+
+    End Sub
+
+    Private Sub UsernameLabel_Click(sender As Object, e As EventArgs) Handles UsernameLabel.Click
 
     End Sub
 End Class
