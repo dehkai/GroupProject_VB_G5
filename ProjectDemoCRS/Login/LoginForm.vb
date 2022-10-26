@@ -2,13 +2,15 @@ Public Class LoginForm
     Dim user As UserClass
     Dim loginModel As LoginModel
     Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
+        Dim username, password As String
         user.setUserData(UsernameTextBox.Text, Me.PasswordTextBox.Text)
-        Dim valid = loginModel.checkLogin(user)
+        username = UsernameTextBox.Text
+        password = PasswordTextBox.Text
+        'Dim valid = loginModel.checkLogin(user)
+        Dim valid = loginModel.checkLogin(username, password)
         If (valid) Then
             CrsMainForm.Show()
             Me.Hide()
-        Else
-            MessageBox.Show("wrong input")
         End If
     End Sub
 
@@ -17,7 +19,13 @@ Public Class LoginForm
     End Sub
 
     Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles Me.Load
+
         user = New UserClass()
         loginModel = New LoginModel
+        loginModel.createConnection()
+    End Sub
+
+    Private Sub UsernameTextBox_TextChanged(sender As Object, e As EventArgs) Handles UsernameTextBox.TextChanged
+
     End Sub
 End Class

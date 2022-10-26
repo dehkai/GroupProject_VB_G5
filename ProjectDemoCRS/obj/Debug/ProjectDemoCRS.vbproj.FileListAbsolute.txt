@@ -105,3 +105,4 @@ D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\1.Project\GroupProject_VB_G5\Pro
 D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\1.Project\GroupProject_VB_G5\ProjectDemoCRS\bin\Debug\System.Numerics.Vectors.xml
 D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\1.Project\GroupProject_VB_G5\ProjectDemoCRS\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\1.Project\GroupProject_VB_G5\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.CopyComplete
+D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\1.Project\GroupProject_VB_G5\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentSubjectListForm.resources

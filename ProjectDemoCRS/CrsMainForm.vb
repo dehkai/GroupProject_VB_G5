@@ -15,5 +15,15 @@
         StudentListForm.ShowDialog()
     End Sub
 
+    Private Sub ApplicationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApplicationToolStripMenuItem.Click
 
+    End Sub
+
+    Private Sub CrsMainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub SubjectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubjectToolStripMenuItem.Click
+        StudentSubjectListForm.ShowDialog()
+    End Sub
 End Class
