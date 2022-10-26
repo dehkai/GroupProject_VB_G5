@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 26, 2022 at 09:44 AM
+-- Generation Time: Oct 26, 2022 at 12:30 PM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -75,6 +75,14 @@ CREATE TABLE IF NOT EXISTS `subject` (
   PRIMARY KEY (`subjectCode`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `subject`
+--
+
+INSERT INTO `subject` (`subjectCode`, `subjectName`, `credit`) VALUES
+('DDWD3908', 'LATIHAN INDUSTRI', 8),
+('DDWD3914', 'LAPORAN LATIHAN INDUSTRI', 4);
+
 -- --------------------------------------------------------
 
 --
@@ -98,8 +106,19 @@ DROP TABLE IF EXISTS `usertbl`;
 CREATE TABLE IF NOT EXISTS `usertbl` (
   `userName` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
-  `userLevel` varchar(100) NOT NULL
+  `userLevel` varchar(100) NOT NULL,
+  PRIMARY KEY (`userName`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `usertbl`
+--
+
+INSERT INTO `usertbl` (`userName`, `password`, `userLevel`) VALUES
+('tancheesen', '123456', 'student'),
+('yapdehkai', '12345', 'student'),
+('shaza', '12345', 'student'),
+('amirah', '12345', 'student');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
