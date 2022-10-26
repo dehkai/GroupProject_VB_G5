@@ -1,6 +1,6 @@
 ﻿Public Class UserClass
-    Private userName As String
-    Private password As String
+    Friend userName As String
+    Friend password As String
     Private userAccess As String
     Public Sub setUserData(userName As String, password As String)
         Me.userName = userName

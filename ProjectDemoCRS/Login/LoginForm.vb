@@ -7,6 +7,8 @@ Public Class LoginForm
         If (valid) Then
             CrsMainForm.Show()
             Me.Hide()
+        Else
+            MessageBox.Show("wrong input")
         End If
     End Sub
 
