@@ -26,4 +26,8 @@
     Private Sub SubjectToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubjectToolStripMenuItem.Click
         StudentSubjectListForm.ShowDialog()
     End Sub
+
+    Private Sub SubjectListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubjectListToolStripMenuItem.Click
+        SubjectListForm.ShowDialog()
+    End Sub
 End Class

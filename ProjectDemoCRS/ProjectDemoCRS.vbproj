@@ -73,6 +73,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.OleDb, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.OleDb.6.0.0\lib\net461\System.Data.OleDb.dll</HintPath>
+    </Reference>
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
@@ -173,6 +176,12 @@
     <Compile Include="StudentInformation\StudentListForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SubjectInformation\SubjectListForm.Designer.vb">
+      <DependentUpon>SubjectListForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectInformation\SubjectListForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CrsMainForm.resx">
@@ -201,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentInformation\StudentListForm.resx">
       <DependentUpon>StudentListForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectInformation\SubjectListForm.resx">
+      <DependentUpon>SubjectListForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
