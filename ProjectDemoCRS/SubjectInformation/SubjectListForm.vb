@@ -51,7 +51,8 @@ Public Class SubjectListForm
             cmd.ExecuteNonQuery()
             conn.Close()
             MessageBox.Show("Record Updated", "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
+            SearchByCodeButton_Click(New Object, New EventArgs())
+            viewer()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -65,6 +66,28 @@ Public Class SubjectListForm
 
         Catch ex As Exception
 
+        End Try
+    End Sub
+
+    Private Sub SearchByCodeButton_Click(sender As Object, e As EventArgs) Handles SearchByCodeButton.Click
+        Dim checker As Integer
+        Try
+            conn.Open()
+            cmd = conn.CreateCommand()
+            cmd.CommandType = CommandType.Text
+            cmd.CommandText = "select * from subject where subjectCode = '" + SearchTextBox.Text + "'"
+            cmd.ExecuteNonQuery()
+            dt = New DataTable()
+            da = New OleDbDataAdapter(cmd)
+            da.Fill(dt)
+            checker = Convert.ToInt32(dt.Rows.Count.ToString)
+            SubjectListDataGridView.DataSource = dt
+            conn.Close()
+            If (checker = 0) Then
+                SearchTextBox.Text = "Search"
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
     End Sub
 End Class
