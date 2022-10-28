@@ -42,4 +42,29 @@ Public Class SubjectListForm
 
     End Sub
 
+    Private Sub UpdateButton_Click(sender As Object, e As EventArgs) Handles UpdateButton.Click
+        Try
+            conn.Open()
+            cmd = conn.CreateCommand()
+            cmd.CommandType = CommandType.Text
+            cmd.CommandText = "update subject set subjectCode = '" + SubjectCodeTextBox.Text + "',subjectName = '" + SubjectNameTextBox.Text + "',credit = '" + CreditTextBox.Text + "' where subjectCode = '" + SubjectCodeTextBox.Text + "'"
+            cmd.ExecuteNonQuery()
+            conn.Close()
+            MessageBox.Show("Record Updated", "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub SubjectListDataGridView_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles SubjectListDataGridView.CellClick
+        Try
+            SubjectCodeTextBox.Text = SubjectListDataGridView.SelectedRows(0).Cells(0).Value.ToString()
+            SubjectNameTextBox.Text = SubjectListDataGridView.SelectedRows(0).Cells(1).Value.ToString()
+            CreditTextBox.Text = SubjectListDataGridView.SelectedRows(0).Cells(2).Value.ToString()
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
 End Class
