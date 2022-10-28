@@ -6,7 +6,7 @@
 
 
     Friend Sub prepareToUpdateStudent(studentMatric As String)
-        MessageBox.Show("to update studnet with matric" & studentMatric)
+        MessageBox.Show("to update studnet with matric " & studentMatric)
         With Me
             .AddUpdateButton.Text = "Update"
         End With
@@ -75,6 +75,7 @@
             .classGroup = classComboBox.Text
         End With
 
+        MessageBox.Show(theNewStudentRec.ic.ToString())
         addOk = myStudent.addStudent(theNewStudentRec)
         If addOk Then
             messageString = "New student with matric : " & theNewStudentRec.matric & " has been added"
@@ -100,6 +101,7 @@
         Dim updateOk As Boolean
         Dim messageString As String
         theNewStudentRec.matric = matricTextBox.Text
+        theNewStudentRec.ic = icNumberTextBox.Text
         theNewStudentRec.name = nameTextBox.Text
         theNewStudentRec.dob = dobDateTimePicker1.Value
         theNewStudentRec.classGroup = classComboBox.Text
