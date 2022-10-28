@@ -150,3 +150,6 @@ C:\Users\ydk14\OneDrive\Desktop\GroupProject_VB_G5\ProjectDemoCRS\obj\Debug\Proj
 C:\Users\ydk14\OneDrive\Desktop\GroupProject_VB_G5\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.pdb
 C:\Users\ydk14\OneDrive\Desktop\GroupProject_VB_G5\ProjectDemoCRS\bin\Debug\System.Data.OleDb.dll
 C:\Users\ydk14\OneDrive\Desktop\GroupProject_VB_G5\ProjectDemoCRS\bin\Debug\System.Data.OleDb.xml
+D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\1.Project\GroupProject_VB_G5\ProjectDemoCRS\bin\Debug\System.Data.OleDb.dll
+D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\1.Project\GroupProject_VB_G5\ProjectDemoCRS\bin\Debug\System.Data.OleDb.xml
+D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\1.Project\GroupProject_VB_G5\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.SubjectListForm.resources

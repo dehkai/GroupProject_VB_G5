@@ -1,6 +1,6 @@
 ﻿Imports System.Data.OleDb
 Public Class SubjectListForm
-    Dim conn As New OleDbConnection
+    Private conn As New OleDb.OleDbConnection
     Dim cmd As OleDbCommand
     Dim dt As New DataTable
     Dim da As New OleDbDataAdapter(cmd)
@@ -23,7 +23,8 @@ Public Class SubjectListForm
     End Sub
 
     Private Sub SubjectListForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ydk14\OneDrive\Desktop\GroupProject_VB_G5\ProjectDemoCRS\bin\Debug\ihsanTuitionCenterDb.accdb"
+        'conn.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ydk14\OneDrive\Desktop\GroupProject_VB_G5\ProjectDemoCRS\bin\Debug\ihsanTuitionCenterDb.accdb"
+        conn.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
         SearchTextBox.Text = "Search"
         SearchTextBox.ForeColor = Color.Silver
         viewer()
@@ -171,5 +172,9 @@ Public Class SubjectListForm
             MessageBox.Show(ex.Message, "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
             conn.Close()
         End Try
+    End Sub
+
+    Private Sub SubjectCodeTextBox_TextChanged(sender As Object, e As EventArgs) Handles SubjectCodeTextBox.TextChanged
+
     End Sub
 End Class
