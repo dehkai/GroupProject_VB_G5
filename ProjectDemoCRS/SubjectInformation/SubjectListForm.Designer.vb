@@ -22,11 +22,9 @@ Partial Class SubjectListForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.ExitButton = New System.Windows.Forms.Button()
+        Me.ViewAllButton = New System.Windows.Forms.Button()
         Me.SearchByNameButton = New System.Windows.Forms.Button()
         Me.SearchByCodeButton = New System.Windows.Forms.Button()
         Me.ClearButton = New System.Windows.Forms.Button()
@@ -68,7 +66,7 @@ Partial Class SubjectListForm
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.SystemColors.Control
-        Me.Panel5.Controls.Add(Me.ExitButton)
+        Me.Panel5.Controls.Add(Me.ViewAllButton)
         Me.Panel5.Controls.Add(Me.SearchByNameButton)
         Me.Panel5.Controls.Add(Me.SearchByCodeButton)
         Me.Panel5.Controls.Add(Me.ClearButton)
@@ -80,15 +78,15 @@ Partial Class SubjectListForm
         Me.Panel5.Size = New System.Drawing.Size(342, 488)
         Me.Panel5.TabIndex = 0
         '
-        'ExitButton
+        'ViewAllButton
         '
-        Me.ExitButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ExitButton.Location = New System.Drawing.Point(15, 422)
-        Me.ExitButton.Name = "ExitButton"
-        Me.ExitButton.Size = New System.Drawing.Size(314, 62)
-        Me.ExitButton.TabIndex = 0
-        Me.ExitButton.Text = "Exit"
-        Me.ExitButton.UseVisualStyleBackColor = True
+        Me.ViewAllButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ViewAllButton.Location = New System.Drawing.Point(15, 422)
+        Me.ViewAllButton.Name = "ViewAllButton"
+        Me.ViewAllButton.Size = New System.Drawing.Size(314, 62)
+        Me.ViewAllButton.TabIndex = 0
+        Me.ViewAllButton.Text = "View All"
+        Me.ViewAllButton.UseVisualStyleBackColor = True
         '
         'SearchByNameButton
         '
@@ -241,23 +239,7 @@ Partial Class SubjectListForm
         '
         Me.SubjectListDataGridView.BackgroundColor = System.Drawing.SystemColors.ButtonFace
         Me.SubjectListDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.SubjectListDataGridView.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.SubjectListDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.SubjectListDataGridView.DefaultCellStyle = DataGridViewCellStyle4
         Me.SubjectListDataGridView.Location = New System.Drawing.Point(14, 301)
         Me.SubjectListDataGridView.Name = "SubjectListDataGridView"
         Me.SubjectListDataGridView.Size = New System.Drawing.Size(855, 252)
@@ -324,5 +306,5 @@ Partial Class SubjectListForm
     Friend WithEvents UpdateButton As Button
     Friend WithEvents AddButton As Button
     Friend WithEvents SearchTextBox As TextBox
-    Friend WithEvents ExitButton As Button
+    Friend WithEvents ViewAllButton As Button
 End Class

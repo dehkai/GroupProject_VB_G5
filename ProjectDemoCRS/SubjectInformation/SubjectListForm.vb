@@ -18,7 +18,8 @@ Public Class SubjectListForm
         SubjectListDataGridView.Columns(0).Width = 150
         SubjectListDataGridView.Columns(1).Width = 500
         SubjectListDataGridView.Columns(2).Width = 145
-
+        SubjectListDataGridView.ColumnHeadersDefaultCellStyle.Font = New Font("Microsoft Sans Serif", 12.0F)
+        SubjectListDataGridView.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 12.0F)
     End Sub
 
     Private Sub SubjectListForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -31,14 +32,22 @@ Public Class SubjectListForm
     End Sub
 
     Private Sub AddButton_Click(sender As Object, e As EventArgs) Handles AddButton.Click
-        conn.Open()
-        cmd = conn.CreateCommand()
-        cmd.CommandType = CommandType.Text
-        cmd.CommandText = "insert into subject(subjectCode,subjectName,credit)values('" + SubjectCodeTextBox.Text +
-        "','" + SubjectNameTextBox.Text + "','" + CreditTextBox.Text + "')"
-        cmd.ExecuteNonQuery()
-        conn.Close()
-        MessageBox.Show("Record Saved", "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+        Try
+            conn.Open()
+            cmd = conn.CreateCommand()
+            cmd.CommandType = CommandType.Text
+            cmd.CommandText = "insert into subject(subjectCode,subjectName,credit)values('" + SubjectCodeTextBox.Text +
+            "','" + SubjectNameTextBox.Text + "','" + CreditTextBox.Text + "')"
+            cmd.ExecuteNonQuery()
+            conn.Close()
+            MessageBox.Show("Record Added", "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            conn.Close()
+        End Try
+
+
 
     End Sub
 
@@ -55,6 +64,7 @@ Public Class SubjectListForm
             viewer()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            conn.Close()
         End Try
     End Sub
 
@@ -65,7 +75,8 @@ Public Class SubjectListForm
             CreditTextBox.Text = SubjectListDataGridView.SelectedRows(0).Cells(2).Value.ToString()
 
         Catch ex As Exception
-
+            MessageBox.Show(ex.Message, "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            conn.Close()
         End Try
     End Sub
 
@@ -88,6 +99,77 @@ Public Class SubjectListForm
             End If
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub DeleteButton_Click(sender As Object, e As EventArgs) Handles DeleteButton.Click
+        Try
+            conn.Open()
+            cmd = conn.CreateCommand()
+            cmd.CommandType = CommandType.Text
+            cmd.CommandText = "delete * from subject where subjectCode = '" + SubjectCodeTextBox.Text + "'"
+            cmd.ExecuteNonQuery()
+            conn.Close()
+            MessageBox.Show("Record Deleted", "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            SearchByCodeButton_Click(New Object, New EventArgs())
+            viewer()
+            SubjectCodeTextBox.Text = ""
+            SubjectNameTextBox.Text = ""
+            CreditTextBox.Text = ""
+            SearchTextBox.Text = "Search"
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            conn.Close()
+        End Try
+    End Sub
+
+    Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
+        SubjectCodeTextBox.Text = ""
+        SubjectNameTextBox.Text = ""
+        CreditTextBox.Text = ""
+        SearchTextBox.Text = "Search"
+    End Sub
+
+
+
+    Private Sub SearchTextBox_MouseEnter(sender As Object, e As EventArgs) Handles SearchTextBox.MouseEnter
+        SearchTextBox.Text = ""
+        SearchTextBox.Focus()
+        SearchTextBox.ForeColor = Color.Black
+    End Sub
+
+    Private Sub SearchTextBox_MouseLeave(sender As Object, e As EventArgs) Handles SearchTextBox.MouseLeave
+        If (SearchTextBox.Text = "") Then
+            SearchTextBox.Text = "Search"
+            SearchTextBox.ForeColor = Color.Silver
+        End If
+    End Sub
+
+    Private Sub ViewAllButton_Click(sender As Object, e As EventArgs) Handles ViewAllButton.Click
+        viewer()
+    End Sub
+
+    Private Sub SearchByNameButton_Click(sender As Object, e As EventArgs) Handles SearchByNameButton.Click
+        Dim checker As Integer
+        Try
+            conn.Open()
+            cmd = conn.CreateCommand()
+            cmd.CommandType = CommandType.Text
+            cmd.CommandText = "select * from subject where subjectName = '" + SearchTextBox.Text + "'"
+            cmd.ExecuteNonQuery()
+            dt = New DataTable()
+            da = New OleDbDataAdapter(cmd)
+            da.Fill(dt)
+            checker = Convert.ToInt32(dt.Rows.Count.ToString)
+            SubjectListDataGridView.DataSource = dt
+            conn.Close()
+            If (checker = 0) Then
+                SearchTextBox.Text = "Search"
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            conn.Close()
         End Try
     End Sub
 End Class
