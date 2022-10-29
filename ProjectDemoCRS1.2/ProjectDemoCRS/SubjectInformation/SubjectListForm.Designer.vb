@@ -58,7 +58,7 @@ Partial Class SubjectListForm
         Me.Panel1.Controls.Add(Me.Panel4)
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Location = New System.Drawing.Point(12, -1)
+        Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1260, 679)
         Me.Panel1.TabIndex = 1
@@ -268,7 +268,7 @@ Partial Class SubjectListForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1275, 682)
+        Me.ClientSize = New System.Drawing.Size(1284, 703)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "SubjectListForm"
         Me.Text = "Subject List"
