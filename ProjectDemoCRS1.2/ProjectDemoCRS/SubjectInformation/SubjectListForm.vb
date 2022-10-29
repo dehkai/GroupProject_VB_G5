@@ -4,7 +4,7 @@ Public Class SubjectListForm
     Dim cmd As OleDbCommand
     Dim dt As New DataTable
     Dim da As New OleDbDataAdapter(cmd)
-
+    Dim subjectCode As String
     Private bitmap As Bitmap
 
     Private Sub viewer()
@@ -27,6 +27,7 @@ Public Class SubjectListForm
         conn.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
         SearchTextBox.Text = "Search"
         SearchTextBox.ForeColor = Color.Silver
+        Me.ViewStudentListButton.Enabled = False
         viewer()
 
 
@@ -43,6 +44,8 @@ Public Class SubjectListForm
             cmd.ExecuteNonQuery()
             conn.Close()
             MessageBox.Show("Record Added", "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            SearchByCodeButton_Click(New Object, New EventArgs())
+            viewer()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
             conn.Close()
@@ -74,6 +77,15 @@ Public Class SubjectListForm
             SubjectCodeTextBox.Text = SubjectListDataGridView.SelectedRows(0).Cells(0).Value.ToString()
             SubjectNameTextBox.Text = SubjectListDataGridView.SelectedRows(0).Cells(1).Value.ToString()
             CreditTextBox.Text = SubjectListDataGridView.SelectedRows(0).Cells(2).Value.ToString()
+            subjectCode = SubjectListDataGridView.CurrentCell.Value
+            Try
+                If (subjectCode <> "") Then
+                    Me.ViewStudentListButton.Enabled = True
+                End If
+            Catch ex As Exception
+                Me.ViewStudentListButton.Enabled = False
+            End Try
+
 
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -175,6 +187,19 @@ Public Class SubjectListForm
     End Sub
 
     Private Sub SubjectCodeTextBox_TextChanged(sender As Object, e As EventArgs) Handles SubjectCodeTextBox.TextChanged
+
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+
+    End Sub
+
+    Private Sub ViewStudentListButton_Click(sender As Object, e As EventArgs) Handles ViewStudentListButton.Click
+        StudentListBySubjectCodeForm.showStudentInformation(subjectCode)
+        StudentListBySubjectCodeForm.ShowDialog()
+    End Sub
+
+    Private Sub SubjectListDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles SubjectListDataGridView.CellContentClick
 
     End Sub
 End Class

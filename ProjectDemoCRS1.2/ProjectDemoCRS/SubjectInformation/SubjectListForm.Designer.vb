@@ -24,6 +24,7 @@ Partial Class SubjectListForm
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.ViewStudentListButton = New System.Windows.Forms.Button()
         Me.ViewAllButton = New System.Windows.Forms.Button()
         Me.SearchByNameButton = New System.Windows.Forms.Button()
         Me.SearchByCodeButton = New System.Windows.Forms.Button()
@@ -60,12 +61,13 @@ Partial Class SubjectListForm
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Location = New System.Drawing.Point(12, 12)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1260, 679)
+        Me.Panel1.Size = New System.Drawing.Size(1260, 750)
         Me.Panel1.TabIndex = 1
         '
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.SystemColors.Control
+        Me.Panel5.Controls.Add(Me.ViewStudentListButton)
         Me.Panel5.Controls.Add(Me.ViewAllButton)
         Me.Panel5.Controls.Add(Me.SearchByNameButton)
         Me.Panel5.Controls.Add(Me.SearchByCodeButton)
@@ -75,13 +77,23 @@ Partial Class SubjectListForm
         Me.Panel5.Controls.Add(Me.AddButton)
         Me.Panel5.Location = New System.Drawing.Point(902, 177)
         Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(342, 488)
+        Me.Panel5.Size = New System.Drawing.Size(342, 558)
         Me.Panel5.TabIndex = 0
+        '
+        'ViewStudentListButton
+        '
+        Me.ViewStudentListButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ViewStudentListButton.Location = New System.Drawing.Point(15, 8)
+        Me.ViewStudentListButton.Name = "ViewStudentListButton"
+        Me.ViewStudentListButton.Size = New System.Drawing.Size(314, 62)
+        Me.ViewStudentListButton.TabIndex = 1
+        Me.ViewStudentListButton.Text = "View Student List"
+        Me.ViewStudentListButton.UseVisualStyleBackColor = True
         '
         'ViewAllButton
         '
         Me.ViewAllButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ViewAllButton.Location = New System.Drawing.Point(15, 422)
+        Me.ViewAllButton.Location = New System.Drawing.Point(15, 484)
         Me.ViewAllButton.Name = "ViewAllButton"
         Me.ViewAllButton.Size = New System.Drawing.Size(314, 62)
         Me.ViewAllButton.TabIndex = 0
@@ -91,7 +103,7 @@ Partial Class SubjectListForm
         'SearchByNameButton
         '
         Me.SearchByNameButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SearchByNameButton.Location = New System.Drawing.Point(15, 354)
+        Me.SearchByNameButton.Location = New System.Drawing.Point(15, 416)
         Me.SearchByNameButton.Name = "SearchByNameButton"
         Me.SearchByNameButton.Size = New System.Drawing.Size(314, 62)
         Me.SearchByNameButton.TabIndex = 0
@@ -101,7 +113,7 @@ Partial Class SubjectListForm
         'SearchByCodeButton
         '
         Me.SearchByCodeButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.SearchByCodeButton.Location = New System.Drawing.Point(15, 286)
+        Me.SearchByCodeButton.Location = New System.Drawing.Point(15, 348)
         Me.SearchByCodeButton.Name = "SearchByCodeButton"
         Me.SearchByCodeButton.Size = New System.Drawing.Size(314, 62)
         Me.SearchByCodeButton.TabIndex = 0
@@ -111,7 +123,7 @@ Partial Class SubjectListForm
         'ClearButton
         '
         Me.ClearButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ClearButton.Location = New System.Drawing.Point(15, 218)
+        Me.ClearButton.Location = New System.Drawing.Point(15, 280)
         Me.ClearButton.Name = "ClearButton"
         Me.ClearButton.Size = New System.Drawing.Size(314, 62)
         Me.ClearButton.TabIndex = 0
@@ -121,7 +133,7 @@ Partial Class SubjectListForm
         'DeleteButton
         '
         Me.DeleteButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DeleteButton.Location = New System.Drawing.Point(15, 150)
+        Me.DeleteButton.Location = New System.Drawing.Point(15, 212)
         Me.DeleteButton.Name = "DeleteButton"
         Me.DeleteButton.Size = New System.Drawing.Size(314, 62)
         Me.DeleteButton.TabIndex = 0
@@ -131,7 +143,7 @@ Partial Class SubjectListForm
         'UpdateButton
         '
         Me.UpdateButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.UpdateButton.Location = New System.Drawing.Point(15, 82)
+        Me.UpdateButton.Location = New System.Drawing.Point(15, 144)
         Me.UpdateButton.Name = "UpdateButton"
         Me.UpdateButton.Size = New System.Drawing.Size(314, 62)
         Me.UpdateButton.TabIndex = 0
@@ -141,7 +153,7 @@ Partial Class SubjectListForm
         'AddButton
         '
         Me.AddButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddButton.Location = New System.Drawing.Point(15, 14)
+        Me.AddButton.Location = New System.Drawing.Point(15, 76)
         Me.AddButton.Name = "AddButton"
         Me.AddButton.Size = New System.Drawing.Size(314, 62)
         Me.AddButton.TabIndex = 0
@@ -178,7 +190,7 @@ Partial Class SubjectListForm
         Me.Panel3.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Panel3.Location = New System.Drawing.Point(14, 98)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(882, 567)
+        Me.Panel3.Size = New System.Drawing.Size(882, 637)
         Me.Panel3.TabIndex = 0
         '
         'CreditTextBox
@@ -242,7 +254,7 @@ Partial Class SubjectListForm
         Me.SubjectListDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SubjectListDataGridView.Location = New System.Drawing.Point(14, 301)
         Me.SubjectListDataGridView.Name = "SubjectListDataGridView"
-        Me.SubjectListDataGridView.Size = New System.Drawing.Size(855, 252)
+        Me.SubjectListDataGridView.Size = New System.Drawing.Size(855, 322)
         Me.SubjectListDataGridView.TabIndex = 0
         '
         'Panel2
@@ -268,7 +280,7 @@ Partial Class SubjectListForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1284, 703)
+        Me.ClientSize = New System.Drawing.Size(1468, 774)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "SubjectListForm"
         Me.Text = "Subject List"
@@ -306,4 +318,5 @@ Partial Class SubjectListForm
     Friend WithEvents SubjectListDataGridView As DataGridView
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label3 As Label
+    Friend WithEvents ViewStudentListButton As Button
 End Class

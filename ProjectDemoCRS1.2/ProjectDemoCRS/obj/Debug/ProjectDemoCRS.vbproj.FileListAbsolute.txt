@@ -209,3 +209,4 @@ C:\Users\ydk14\OneDrive\Desktop\GroupProject_VB_G5\ProjectDemoCRS1.2\ProjectDemo
 C:\Users\ydk14\OneDrive\Desktop\GroupProject_VB_G5\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS1.2.exe
 C:\Users\ydk14\OneDrive\Desktop\GroupProject_VB_G5\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS1.2.xml
 C:\Users\ydk14\OneDrive\Desktop\GroupProject_VB_G5\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS1.2.pdb
+D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\1.Project\GroupProject_VB_G5\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentListBySubjectCodeForm.resources
