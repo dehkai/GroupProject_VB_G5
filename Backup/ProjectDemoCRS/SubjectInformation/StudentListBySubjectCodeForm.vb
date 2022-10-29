@@ -67,7 +67,7 @@ Public Class StudentListBySubjectCodeForm
         conn.Open()
 
 
-        sql2 = "Select r.subjectCode, stu.name, stu.matricNumber , stu.dateOfBirth , stu.icNumber, stu.course ,stu.gender, stu.email, stu.phoneNumber, stu.address1, stu.address2, stu.city, stu.district, stu.state, stu.groupId"
+        sql2 = "Select r.subjectCode, stu.name, stu.matricNumber , stu.email , stu.icNumber, stu.phoneNumber ,stu.gender"
         sql2 &= " from subjectregister r, student stu"
         sql2 &= " where stu.matricNumber = r.matricNumber"
         sql2 &= " and r.subjectCode = '" & SJCode & "'"
@@ -95,10 +95,17 @@ Public Class StudentListBySubjectCodeForm
     End Sub
 
     Private Sub PrintStudentListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintStudentListToolStripMenuItem.Click
-
+        PrintPreviewDialog1.Document = PrintDocument1
+        PrintPreviewDialog1.PrintPreviewControl.Zoom = 1
+        PrintPreviewDialog1.ShowDialog()
     End Sub
 
     Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        Dim imagebmp As New Bitmap(Me.DataGridView1.Width, Me.DataGridView1.Height)
+        DataGridView1.DrawToBitmap(imagebmp, New Rectangle(0, 0, Me.DataGridView1.Width, Me.DataGridView1.Height))
+        e.Graphics.DrawImage(imagebmp, 0, 0)
+        Dim ReportFont As Font = New Drawing.Font("Bebas Neue", 16)
+        Dim ReportBodyFont As Font = New Drawing.Font("Bebas Neue", 6)
 
     End Sub
 
