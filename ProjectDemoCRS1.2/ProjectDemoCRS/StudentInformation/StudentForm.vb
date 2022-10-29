@@ -100,6 +100,7 @@
         Dim updateOk As Boolean
         Dim messageString As String
         theNewStudentRec.matric = matricTextBox.Text
+        theNewStudentRec.ic = icNumberTextBox.Text
         theNewStudentRec.name = nameTextBox.Text
         theNewStudentRec.dob = dobDateTimePicker1.Value
         theNewStudentRec.classGroup = classComboBox.Text
@@ -117,4 +118,7 @@
 
     End Sub
 
+    Private Sub StudentForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
