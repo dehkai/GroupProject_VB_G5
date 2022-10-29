@@ -84,7 +84,6 @@ Public Class RegistrationForm
             If conn.State <> ConnectionState.Open Then
                 conn.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
                 conn.Open()
-                MsgBox("MS Database Connected!")
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -146,6 +145,10 @@ Public Class RegistrationForm
         currentStudentMatric = mId
         mySubject.RegisterSubjectForThisStudent(subjectCodeToRegister, currentStudentMatric)
         displaySubjectRegister(mId)
+    End Sub
+
+    Private Sub GroupBox3_Enter(sender As Object, e As EventArgs) Handles GroupBox3.Enter
+
     End Sub
 
     Private Sub RegistrationForm_Load(sender As Object, e As EventArgs) Handles Me.Load

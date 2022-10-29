@@ -190,7 +190,7 @@ Partial Class RegistrationForm
         Me.SubjectRegisterDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SubjectRegisterDataGridView.Location = New System.Drawing.Point(21, 50)
         Me.SubjectRegisterDataGridView.Name = "SubjectRegisterDataGridView"
-        Me.SubjectRegisterDataGridView.Size = New System.Drawing.Size(860, 258)
+        Me.SubjectRegisterDataGridView.Size = New System.Drawing.Size(784, 173)
         Me.SubjectRegisterDataGridView.TabIndex = 0
         '
         'GroupBox3
@@ -199,7 +199,7 @@ Partial Class RegistrationForm
         Me.GroupBox3.Controls.Add(Me.TotalCreditLabel)
         Me.GroupBox3.Controls.Add(Me.Label7)
         Me.GroupBox3.Controls.Add(Me.Label6)
-        Me.GroupBox3.Location = New System.Drawing.Point(593, 51)
+        Me.GroupBox3.Location = New System.Drawing.Point(594, 41)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(227, 226)
         Me.GroupBox3.TabIndex = 8
