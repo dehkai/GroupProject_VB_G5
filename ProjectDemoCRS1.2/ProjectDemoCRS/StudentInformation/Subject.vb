@@ -32,7 +32,20 @@ Public Class Subject
 
     End Function
     Friend Function dropSubject(matricString As String, subjectCode As String) As Boolean
-
+        Try
+            Dim sql As String
+            Dim con As New OleDbConnection(My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName) '"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & Application.StartupPath & "\registrationdb.accdb")
+            con.Open()
+            sql = "Delete * FROM subjectregister WHERE subjectCode ='" & subjectCode & "' AND matricNumber ='" & matricString & "'"
+            Debug.WriteLine(sql)
+            Dim cmd As New OleDbCommand(sql, con)
+            cmd.ExecuteNonQuery()
+            con.Close()
+        Catch ex As Exception
+            MessageBox.Show("Error Delete " + subjectCode + " for student with matric:" + matricString)
+            Debug.WriteLine(ex.ToString)
+        End Try
+        Return True
     End Function
     Friend Function getSubjectRecord(subjectCode As String) As SubjectRecord
 

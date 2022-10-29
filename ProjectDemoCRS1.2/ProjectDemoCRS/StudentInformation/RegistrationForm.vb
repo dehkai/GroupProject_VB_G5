@@ -38,14 +38,37 @@ Public Class RegistrationForm
         'conn.Close()
     End Sub
     Private Sub displaySubjectRegister(matricString As String)
+        Dim dataAdapter2 As New OleDb.OleDbDataAdapter
+        Dim sql2 As String
         clearSubjectRegisterGrid()
-        sql = "Select r.subjectCode,s.subjectName"
+        conn.Close()
+        conn.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
+        conn.Open()
+        sql = "Select r.subjectCode,s.subjectName , s.credit"
         sql &= " from subjectregister r, student stu, subject s"
         sql &= " where r.matricNumber = stu.matricNumber"
         sql &= " and r.matricNumber = '" & matricString & "'"
         sql &= " and r.subjectCode = s.subjectCode"
+
+        sql2 = "Select SUM(s.credit) as TotalCredit"
+        sql2 &= " from subjectregister r, student stu, subject s"
+        sql2 &= " where r.matricNumber = stu.matricNumber"
+        sql2 &= " and r.matricNumber = '" & matricString & "'"
+        sql2 &= " and r.subjectCode = s.subjectCode"
+
+        Dim cmd As OleDbCommand = New OleDbCommand(sql2, conn)
+        dr = cmd.ExecuteReader
+        While dr.Read()
+            With Me
+                .TotalCreditLabel.Text = dr("TotalCredit").ToString
+            End With
+        End While
+
+
+
         MessageBox.Show(sql)
         Debug.WriteLine(sql)
+
         dataAdapter = New OleDb.OleDbDataAdapter(sql, conn)
         dataAdapter.Fill(ds, "ihsanTuitionCenterDb")
         Me.SubjectRegisterDataGridView.DataMember = "ihsanTuitionCenterDb"
@@ -89,7 +112,7 @@ Public Class RegistrationForm
         If col = 0 And row < noOfRec - 1 Then ' allow subjectCode selection only
             msubjectCodeString = SubjectRegisterDataGridView.CurrentCell.Value
         Else
-            msubjectCodeString=""
+            msubjectCodeString = ""
         End If
 
 
@@ -105,20 +128,14 @@ Public Class RegistrationForm
         Dim deletedOK As Boolean
         Dim messageString = "Drop " & msubjectCodeString & " subject"
         If msubjectCodeString <> "" Then
-        dialogResult = MessageBox.Show(messageString, "Confirm Drop", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+            dialogResult = MessageBox.Show(messageString, "Confirm Drop", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
             If dialogResult = MsgBoxResult.Ok Then
                 'deletedOK = mySubject.dropStudentSubject(mId, msubjectCodeString)
-
-
                 deletedOK = mySubject.dropSubject(mId, msubjectCodeString)
-
-
-
                 displaySubjectRegister(mId)
             End If
         End If
     End Sub
-
     Private Sub RegistrationForm_Deactivate(sender As Object, e As EventArgs) Handles Me.Deactivate
         conn.Close()
     End Sub
