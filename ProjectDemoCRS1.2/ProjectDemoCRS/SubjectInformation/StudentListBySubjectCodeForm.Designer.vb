@@ -54,7 +54,11 @@ Partial Class StudentListBySubjectCodeForm
         '
         'PrintDialog1
         '
+        Me.PrintDialog1.Document = Me.PrintDocument1
         Me.PrintDialog1.UseEXDialog = True
+        '
+        'PrintDocument1
+        '
         '
         'MenuStrip1
         '

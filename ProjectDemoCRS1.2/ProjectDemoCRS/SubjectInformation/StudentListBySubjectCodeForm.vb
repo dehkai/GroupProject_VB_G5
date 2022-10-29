@@ -98,6 +98,10 @@ Public Class StudentListBySubjectCodeForm
 
     End Sub
 
+    Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+
+    End Sub
+
     Private Sub StudentListBySubjectCodeForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
