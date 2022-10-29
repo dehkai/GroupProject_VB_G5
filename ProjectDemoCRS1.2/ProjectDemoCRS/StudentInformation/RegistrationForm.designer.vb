@@ -32,14 +32,20 @@ Partial Class RegistrationForm
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.SubjectCodeTextBox = New System.Windows.Forms.TextBox()
         Me.AddSubjectButton = New System.Windows.Forms.Button()
         Me.DropButton = New System.Windows.Forms.Button()
         Me.SubjectRegisterDataGridView = New System.Windows.Forms.DataGridView()
-        Me.SubjectCodeTextBox = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TotalCreditLabel = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.SubjectRegisterDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -138,14 +144,30 @@ Partial Class RegistrationForm
         Me.GroupBox2.Controls.Add(Me.SubjectRegisterDataGridView)
         Me.GroupBox2.Location = New System.Drawing.Point(16, 295)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(904, 325)
+        Me.GroupBox2.Size = New System.Drawing.Size(1126, 325)
         Me.GroupBox2.TabIndex = 1
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Subject Register"
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(838, 17)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(266, 25)
+        Me.Label5.TabIndex = 5
+        Me.Label5.Text = "Enter Subject Code to Add"
+        '
+        'SubjectCodeTextBox
+        '
+        Me.SubjectCodeTextBox.Location = New System.Drawing.Point(887, 45)
+        Me.SubjectCodeTextBox.Name = "SubjectCodeTextBox"
+        Me.SubjectCodeTextBox.Size = New System.Drawing.Size(175, 31)
+        Me.SubjectCodeTextBox.TabIndex = 4
+        '
         'AddSubjectButton
         '
-        Me.AddSubjectButton.Location = New System.Drawing.Point(645, 88)
+        Me.AddSubjectButton.Location = New System.Drawing.Point(887, 83)
         Me.AddSubjectButton.Name = "AddSubjectButton"
         Me.AddSubjectButton.Size = New System.Drawing.Size(179, 53)
         Me.AddSubjectButton.TabIndex = 3
@@ -154,7 +176,7 @@ Partial Class RegistrationForm
         '
         'DropButton
         '
-        Me.DropButton.Location = New System.Drawing.Point(645, 147)
+        Me.DropButton.Location = New System.Drawing.Point(887, 142)
         Me.DropButton.Name = "DropButton"
         Me.DropButton.Size = New System.Drawing.Size(179, 53)
         Me.DropButton.TabIndex = 2
@@ -168,30 +190,62 @@ Partial Class RegistrationForm
         Me.SubjectRegisterDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SubjectRegisterDataGridView.Location = New System.Drawing.Point(21, 50)
         Me.SubjectRegisterDataGridView.Name = "SubjectRegisterDataGridView"
-        Me.SubjectRegisterDataGridView.Size = New System.Drawing.Size(600, 150)
+        Me.SubjectRegisterDataGridView.Size = New System.Drawing.Size(784, 173)
         Me.SubjectRegisterDataGridView.TabIndex = 0
         '
-        'SubjectCodeTextBox
+        'GroupBox3
         '
-        Me.SubjectCodeTextBox.Location = New System.Drawing.Point(645, 50)
-        Me.SubjectCodeTextBox.Name = "SubjectCodeTextBox"
-        Me.SubjectCodeTextBox.Size = New System.Drawing.Size(175, 31)
-        Me.SubjectCodeTextBox.TabIndex = 4
+        Me.GroupBox3.Controls.Add(Me.Label8)
+        Me.GroupBox3.Controls.Add(Me.TotalCreditLabel)
+        Me.GroupBox3.Controls.Add(Me.Label7)
+        Me.GroupBox3.Controls.Add(Me.Label6)
+        Me.GroupBox3.Location = New System.Drawing.Point(594, 41)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(227, 226)
+        Me.GroupBox3.TabIndex = 8
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Information"
         '
-        'Label5
+        'Label8
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(596, 22)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(266, 25)
-        Me.Label5.TabIndex = 5
-        Me.Label5.Text = "Enter Subject Code to Add"
+        Me.Label8.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Label8.Location = New System.Drawing.Point(39, 161)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(149, 38)
+        Me.Label8.TabIndex = 3
+        '
+        'TotalCreditLabel
+        '
+        Me.TotalCreditLabel.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.TotalCreditLabel.Location = New System.Drawing.Point(39, 75)
+        Me.TotalCreditLabel.Name = "TotalCreditLabel"
+        Me.TotalCreditLabel.Size = New System.Drawing.Size(149, 38)
+        Me.TotalCreditLabel.TabIndex = 2
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(54, 126)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(128, 25)
+        Me.Label7.TabIndex = 1
+        Me.Label7.Text = "Fee Amount"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(48, 44)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(134, 25)
+        Me.Label6.TabIndex = 0
+        Me.Label6.Text = "Total Credits"
         '
         'RegistrationForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1205, 669)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -203,6 +257,8 @@ Partial Class RegistrationForm
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         CType(Me.SubjectRegisterDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -221,4 +277,9 @@ Partial Class RegistrationForm
     Friend WithEvents DropButton As System.Windows.Forms.Button
     Friend WithEvents Label5 As Label
     Friend WithEvents SubjectCodeTextBox As TextBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TotalCreditLabel As Label
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
 End Class

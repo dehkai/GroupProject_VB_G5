@@ -29,7 +29,6 @@ Public Class LoginModel
             Dim count = Convert.ToInt32(cmd.ExecuteScalar())
 
             If (count > 0) Then
-                MessageBox.Show("Successfully found the username")
                 successBoolean = True
             ElseIf count = 0 Then
                 MessageBox.Show("Fail to Search the User Account")
