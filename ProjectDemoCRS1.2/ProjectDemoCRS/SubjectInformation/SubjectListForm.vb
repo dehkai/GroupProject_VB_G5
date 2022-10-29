@@ -43,6 +43,8 @@ Public Class SubjectListForm
             cmd.ExecuteNonQuery()
             conn.Close()
             MessageBox.Show("Record Added", "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            SearchByCodeButton_Click(New Object, New EventArgs())
+            viewer()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
             conn.Close()
