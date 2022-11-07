@@ -32,61 +32,54 @@ Partial Class StudentGroupListForm
         'StudentGroupDataGridView
         '
         Me.StudentGroupDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.StudentGroupDataGridView.Location = New System.Drawing.Point(42, 206)
-        Me.StudentGroupDataGridView.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.StudentGroupDataGridView.Location = New System.Drawing.Point(28, 134)
         Me.StudentGroupDataGridView.MultiSelect = False
         Me.StudentGroupDataGridView.Name = "StudentGroupDataGridView"
-        Me.StudentGroupDataGridView.RowHeadersWidth = 62
-        Me.StudentGroupDataGridView.Size = New System.Drawing.Size(2244, 520)
+        Me.StudentGroupDataGridView.Size = New System.Drawing.Size(1496, 338)
         Me.StudentGroupDataGridView.TabIndex = 0
         '
         'updateStudentGroupButton
         '
-        Me.updateStudentGroupButton.BackColor = System.Drawing.Color.Lavender
         Me.updateStudentGroupButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.updateStudentGroupButton.Location = New System.Drawing.Point(758, 740)
-        Me.updateStudentGroupButton.Margin = New System.Windows.Forms.Padding(9, 9, 9, 9)
+        Me.updateStudentGroupButton.Location = New System.Drawing.Point(505, 481)
+        Me.updateStudentGroupButton.Margin = New System.Windows.Forms.Padding(6)
         Me.updateStudentGroupButton.Name = "updateStudentGroupButton"
-        Me.updateStudentGroupButton.Size = New System.Drawing.Size(314, 92)
+        Me.updateStudentGroupButton.Size = New System.Drawing.Size(209, 60)
         Me.updateStudentGroupButton.TabIndex = 8
         Me.updateStudentGroupButton.Text = "Update Class"
-        Me.updateStudentGroupButton.UseVisualStyleBackColor = False
+        Me.updateStudentGroupButton.UseVisualStyleBackColor = True
         '
         'AddStudentGroupButton
         '
-        Me.AddStudentGroupButton.BackColor = System.Drawing.Color.Lavender
         Me.AddStudentGroupButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddStudentGroupButton.Location = New System.Drawing.Point(426, 740)
-        Me.AddStudentGroupButton.Margin = New System.Windows.Forms.Padding(9, 9, 9, 9)
+        Me.AddStudentGroupButton.Location = New System.Drawing.Point(284, 481)
+        Me.AddStudentGroupButton.Margin = New System.Windows.Forms.Padding(6)
         Me.AddStudentGroupButton.Name = "AddStudentGroupButton"
-        Me.AddStudentGroupButton.Size = New System.Drawing.Size(314, 92)
+        Me.AddStudentGroupButton.Size = New System.Drawing.Size(209, 60)
         Me.AddStudentGroupButton.TabIndex = 7
         Me.AddStudentGroupButton.Text = "Add New Class"
-        Me.AddStudentGroupButton.UseVisualStyleBackColor = False
+        Me.AddStudentGroupButton.UseVisualStyleBackColor = True
         '
         'DeleteStudentGroupButton
         '
-        Me.DeleteStudentGroupButton.BackColor = System.Drawing.Color.Lavender
         Me.DeleteStudentGroupButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DeleteStudentGroupButton.Location = New System.Drawing.Point(1114, 740)
-        Me.DeleteStudentGroupButton.Margin = New System.Windows.Forms.Padding(9, 9, 9, 9)
+        Me.DeleteStudentGroupButton.Location = New System.Drawing.Point(743, 481)
+        Me.DeleteStudentGroupButton.Margin = New System.Windows.Forms.Padding(6)
         Me.DeleteStudentGroupButton.Name = "DeleteStudentGroupButton"
-        Me.DeleteStudentGroupButton.Size = New System.Drawing.Size(342, 92)
+        Me.DeleteStudentGroupButton.Size = New System.Drawing.Size(228, 60)
         Me.DeleteStudentGroupButton.TabIndex = 6
         Me.DeleteStudentGroupButton.Text = "Delete Class"
-        Me.DeleteStudentGroupButton.UseVisualStyleBackColor = False
+        Me.DeleteStudentGroupButton.UseVisualStyleBackColor = True
         '
         'StudentGroupListForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.PaleTurquoise
-        Me.ClientSize = New System.Drawing.Size(2055, 862)
+        Me.ClientSize = New System.Drawing.Size(1370, 560)
         Me.Controls.Add(Me.updateStudentGroupButton)
         Me.Controls.Add(Me.AddStudentGroupButton)
         Me.Controls.Add(Me.DeleteStudentGroupButton)
         Me.Controls.Add(Me.StudentGroupDataGridView)
-        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "StudentGroupListForm"
         Me.Text = "StudentGroupForm"
         CType(Me.StudentGroupDataGridView, System.ComponentModel.ISupportInitialize).EndInit()

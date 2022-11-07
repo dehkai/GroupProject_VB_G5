@@ -175,7 +175,7 @@ Partial Class CrsMainForm
         'UserListToolStripMenuItem
         '
         Me.UserListToolStripMenuItem.Name = "UserListToolStripMenuItem"
-        Me.UserListToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.UserListToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
         Me.UserListToolStripMenuItem.Text = "User List"
         '
         'ReportingToolStripMenuItem
@@ -224,7 +224,9 @@ Partial Class CrsMainForm
         '
         'PictureBox1
         '
+        Me.PictureBox1.ErrorImage = CType(resources.GetObject("PictureBox1.ErrorImage"), System.Drawing.Image)
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.InitialImage = CType(resources.GetObject("PictureBox1.InitialImage"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(129, 81)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
@@ -243,6 +245,7 @@ Partial Class CrsMainForm
         Me.Controls.Add(Me.MenuStrip2)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "CrsMainForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "CrsMain"
         Me.MenuStrip2.ResumeLayout(False)
         Me.MenuStrip2.PerformLayout()

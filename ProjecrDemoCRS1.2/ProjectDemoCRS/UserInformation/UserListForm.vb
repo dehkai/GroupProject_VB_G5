@@ -5,7 +5,18 @@ Public Class UserListForm
     Dim dt As New DataTable
     Dim da As New OleDbDataAdapter(cmd)
 
-
+    Private Sub updateTable()
+        conn.Open()
+        cmd = conn.CreateCommand()
+        cmd.CommandType = CommandType.Text
+        cmd.CommandText = "select * from userTbl"
+        cmd.ExecuteNonQuery()
+        dt = New DataTable()
+        da = New OleDbDataAdapter(cmd)
+        da.Fill(dt)
+        UserListDataGridView.DataSource = dt
+        conn.Close()
+    End Sub
     Private Sub viewer()
         conn.Open()
         cmd = conn.CreateCommand()
@@ -31,12 +42,13 @@ Public Class UserListForm
             conn.Open()
             cmd = conn.CreateCommand()
             cmd.CommandType = CommandType.Text
-            cmd.CommandText = "insert into userTbl(userName,password,userLevel)values('" + UsernameTextBox.Text +
+            cmd.CommandText = "insert into userTbl values('" + UsernameTextBox.Text +
             "','" + PasswordTextBox.Text + "','" + UserLevelTextBox.Text + "')"
             cmd.ExecuteNonQuery()
             conn.Close()
             MessageBox.Show("Record Added", "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Information)
             viewer()
+            updateTable()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
             conn.Close()
@@ -44,15 +56,19 @@ Public Class UserListForm
     End Sub
 
     Private Sub ResetPasswordButton_Click(sender As Object, e As EventArgs) Handles ResetPasswordButton.Click
+        Dim sqlString As String
         Try
             conn.Open()
             cmd = conn.CreateCommand()
             cmd.CommandType = CommandType.Text
-            cmd.CommandText = "update userTbl set password = '" + PasswordTextBox.Text + "' where userName = '" + UsernameTextBox.Text + "'"
+            'cmd.CommandText = "update userTbl set password = '" + PasswordTextBox.Text + "' where userName = '" + UsernameTextBox.Text + "'"
+            sqlString = "update userTbl set [password] = '" + PasswordTextBox.Text + "' where [userName] = '" + UsernameTextBox.Text + "'"
+            cmd.CommandText = sqlString
             cmd.ExecuteNonQuery()
             conn.Close()
             MessageBox.Show("Record Updated", "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Information)
             viewer()
+            updateTable()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Error)
             conn.Close()
