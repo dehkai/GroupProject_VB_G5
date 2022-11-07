@@ -199,6 +199,12 @@
     <Compile Include="TeacherInformation\TeacherListForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UserInformation\UserListForm.Designer.vb">
+      <DependentUpon>UserListForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserInformation\UserListForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CrsMainForm.resx">
@@ -239,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TeacherInformation\TeacherListForm.resx">
       <DependentUpon>TeacherListForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInformation\UserListForm.resx">
+      <DependentUpon>UserListForm.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

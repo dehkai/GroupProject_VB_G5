@@ -27,4 +27,8 @@
         TeacherForm.Show()
         TeacherForm.AddUpdateButton.Text = "Add"
     End Sub
+
+    Private Sub UserListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UserListToolStripMenuItem.Click
+        UserListForm.ShowDialog()
+    End Sub
 End Class
