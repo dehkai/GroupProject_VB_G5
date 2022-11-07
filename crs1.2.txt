@@ -1,0 +1,25 @@
+Database
+========================
+ihsanTuitionCenterDb.accdb 
+- located in the bin/debug folder of this project
+- your team may need to add table/add field/relationship etc to fullfill 
+related requirement
+
+Requirement Completed
+=========================
+Manage Student Group
+-display class list
+-add class
+-update class
+-delete class
+
+Manage Student Information
+-display student list
+-add student
+-update student
+-delete student
+-search student by name
+
+Maintain Registration Information
+- register subject for student
+- display student subject register
