@@ -24,6 +24,8 @@ Partial Class RegistrationForm
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(RegistrationForm))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.IcLabel = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.DistrictLabel = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.cityLabel = New System.Windows.Forms.Label()
@@ -60,8 +62,9 @@ Partial Class RegistrationForm
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
-        Me.IcLabel = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
+        Me.EmailButton = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.EmailLabel = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         CType(Me.SubjectRegisterDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -99,6 +102,24 @@ Partial Class RegistrationForm
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Student Information"
+        '
+        'IcLabel
+        '
+        Me.IcLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.IcLabel.Location = New System.Drawing.Point(201, 113)
+        Me.IcLabel.Name = "IcLabel"
+        Me.IcLabel.Size = New System.Drawing.Size(257, 35)
+        Me.IcLabel.TabIndex = 17
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(35, 123)
+        Me.Label11.Name = "Label11"
+        Me.Label11.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.Label11.Size = New System.Drawing.Size(32, 25)
+        Me.Label11.TabIndex = 16
+        Me.Label11.Text = "IC"
         '
         'DistrictLabel
         '
@@ -410,29 +431,40 @@ Partial Class RegistrationForm
         '
         Me.PrintDialog1.UseEXDialog = True
         '
-        'IcLabel
+        'EmailButton
         '
-        Me.IcLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.IcLabel.Location = New System.Drawing.Point(201, 113)
-        Me.IcLabel.Name = "IcLabel"
-        Me.IcLabel.Size = New System.Drawing.Size(257, 35)
-        Me.IcLabel.TabIndex = 17
+        Me.EmailButton.Location = New System.Drawing.Point(953, 154)
+        Me.EmailButton.Name = "EmailButton"
+        Me.EmailButton.Size = New System.Drawing.Size(214, 108)
+        Me.EmailButton.TabIndex = 10
+        Me.EmailButton.Text = "Click me to Email Registration Slip"
+        Me.EmailButton.UseVisualStyleBackColor = True
         '
-        'Label11
+        'Label10
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(35, 123)
-        Me.Label11.Name = "Label11"
-        Me.Label11.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label11.Size = New System.Drawing.Size(32, 25)
-        Me.Label11.TabIndex = 16
-        Me.Label11.Text = "IC"
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(1013, 69)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(65, 25)
+        Me.Label10.TabIndex = 11
+        Me.Label10.Text = "Email"
+        '
+        'EmailLabel
+        '
+        Me.EmailLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.EmailLabel.Location = New System.Drawing.Point(915, 100)
+        Me.EmailLabel.Name = "EmailLabel"
+        Me.EmailLabel.Size = New System.Drawing.Size(278, 35)
+        Me.EmailLabel.TabIndex = 18
         '
         'RegistrationForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1205, 669)
+        Me.Controls.Add(Me.EmailLabel)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.EmailButton)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -494,4 +526,7 @@ Partial Class RegistrationForm
     Friend WithEvents Label16 As Label
     Friend WithEvents IcLabel As Label
     Friend WithEvents Label11 As Label
+    Friend WithEvents EmailButton As Button
+    Friend WithEvents Label10 As Label
+    Friend WithEvents EmailLabel As Label
 End Class

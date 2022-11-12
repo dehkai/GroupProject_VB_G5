@@ -1,5 +1,6 @@
 ﻿Imports System.Data.OleDb
-
+Imports System.Net.Mail
+Imports System.Text
 Public Class RegistrationForm
     Dim count As Integer
     Const CourseFee As Integer = 50
@@ -17,6 +18,7 @@ Public Class RegistrationForm
     Dim msubjectCodeString As String
 
     Dim mySubject As New Subject
+
     Public Sub showStudentInformation(matricString As String)
 
         displayStudentRecord(matricString)
@@ -69,7 +71,7 @@ Public Class RegistrationForm
         sql3 &= " and r.matricNumber = '" & matricString & "'"
         sql3 &= " and r.subjectCode = s.subjectCode"
 
-        sql4 = "Select icNumber,address1, address2, city, district, postCode"
+        sql4 = "Select icNumber,address1, address2, city, district, postCode ,email "
         sql4 &= " from student "
         sql4 &= " where matricNumber = '" & matricString & "'"
 
@@ -78,6 +80,7 @@ Public Class RegistrationForm
         dr2 = cmd3.ExecuteReader
         While dr2.Read()
             With Me
+                .EmailLabel.Text = dr2("email").ToString
                 .IcLabel.Text = dr2("icNumber").ToString
                 .Address1Label.Text = dr2("address1").ToString
                 .Address2Label.Text = dr2("address2").ToString
@@ -276,6 +279,63 @@ Public Class RegistrationForm
     Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
     End Sub
+
+    Private Sub EmailButton_Click(sender As Object, e As EventArgs) Handles EmailButton.Click
+        Dim strIntro, tableStyle, headerStyle As String
+        Dim message As MailMessage = New MailMessage
+        strIntro = "Hye " + nameLabel.Text.ToString + "," + ControlChars.NewLine + ControlChars.NewLine + "Here is your subject registration detail" + ControlChars.NewLine + ControlChars.NewLine
+        headerStyle = "border-collapse : ""collapse""; text-align : ""left; padding: ""16px""; border: ""1px solid #ddd"""
+
+        Dim sbContent2 As New StringBuilder()
+        sbContent2.Append(String.Format("<p " + headerStyle + ">NAME :" + nameLabel.Text.ToString) + "</p>")
+        sbContent2.Append(String.Format("<p " + headerStyle + ">No. IC :" + IcLabel.Text.ToString) + "</p>")
+        sbContent2.Append(String.Format("<h4 " + headerStyle + ">ADDRESS :</h4>"))
+        sbContent2.Append(String.Format("<p >" + Address1Label.Text.ToString) + ",</p>")
+        sbContent2.Append(String.Format("<p>" + Address2Label.Text.ToString) + ",</p>")
+        sbContent2.Append(String.Format("<p>" + postCodeLabel.Text.ToString + "," + DistrictLabel.Text.ToString + "," + cityLabel.Text.ToString() + "</p>."))
+        Dim tableHeader As String = "<tr><th " + headerStyle + ">Code</th> <th " + headerStyle + ">Credit</th> <th " + headerStyle + ">Name</th></tr>"
+        Dim strTopTag As String = "<table>" + tableHeader + "<tbody>"
+        Dim strBottomTag As String = "</tbody></table>"
+        Dim sbContent As New StringBuilder()
+        Dim newInt As Integer
+
+        For a = 0 To count - 1
+            sbContent.Append("<tr>")
+            newInt = a + 1
+
+            sbContent.Append(String.Format("<td " + headerStyle + ">  {0}     </td>", SubjectRegisterDataGridView.Rows(a).Cells(0).Value.ToString()))
+            sbContent.Append(String.Format("<td " + headerStyle + ">  {0}     </td>", SubjectRegisterDataGridView.Rows(a).Cells(2).Value.ToString()))
+            sbContent.Append(String.Format("<td " + headerStyle + ">  {0}     </td>", SubjectRegisterDataGridView.Rows(a).Cells(1).Value.ToString()))
+            sbContent.Append(String.Format("<br>"))
+            sbContent.Append("<tr>")
+        Next
+        Dim sbContent3 As New StringBuilder()
+        sbContent3.Append(String.Format("<p " + headerStyle + ">TOTAL CREDIT :" + TotalCreditLabel.Text.ToString) + "</p>")
+        sbContent3.Append(String.Format("<p " + headerStyle + ">TOTAL FEES :" + StudentFeeLabel.Text.ToString) + "</p>")
+
+        Dim emailTemplate As String = strIntro + sbContent2.ToString() + strTopTag & sbContent.ToString() & strBottomTag + sbContent3.ToString()
+        Try
+            Dim smtp_server As New SmtpClient
+            Dim e_mail As New MailMessage
+            smtp_server.UseDefaultCredentials = False
+            smtp_server.Credentials = New Net.NetworkCredential("tansen@graduate.utm.my", "Lone#2002")
+            smtp_server.Port = 587
+            smtp_server.EnableSsl = True
+            smtp_server.Host = "smtp.gmail.com"
+            e_mail = New MailMessage
+            e_mail.From = New MailAddress("tansen@graduate.utm.my")
+            e_mail.To.Add(EmailLabel.Text.ToString)
+            e_mail.Subject = "Registration Slip"
+            e_mail.IsBodyHtml = True
+            e_mail.Body = emailTemplate
+            smtp_server.Send(e_mail)
+            MessageBox.Show("Email sended to " + EmailLabel.Text.ToString, "Email", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Catch ex As Exception
+            MessageBox.Show("something failed.")
+        End Try
+    End Sub
+
+
 
     'Public Sub displayAddress(matricString As String)
     '    Dim dataAdapter2 As New OleDb.OleDbDataAdapter

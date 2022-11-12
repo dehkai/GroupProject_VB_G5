@@ -91,3 +91,9 @@ D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\1.Project\ProjectFile\ProjecrDem
 D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\1.Project\ProjectFile\ProjecrDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS1.2.xml
 D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\1.Project\ProjectFile\ProjecrDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS1.2.pdb
 D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\1.Project\ProjectFile\ProjecrDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentCrsMainForm.resources
+D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\1.Project\ProjectFile\ProjecrDemoCRS1.2\ProjectDemoCRS\bin\Debug\PdfSharp.Charting.dll
+D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\1.Project\ProjectFile\ProjecrDemoCRS1.2\ProjectDemoCRS\bin\Debug\PdfSharp.dll
+D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\1.Project\ProjectFile\ProjecrDemoCRS1.2\ProjectDemoCRS\bin\Debug\PdfSharp.xml
+D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\1.Project\ProjectFile\ProjecrDemoCRS1.2\ProjectDemoCRS\bin\Debug\PdfSharp.Charting.xml
+D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\1.Project\ProjectFile\ProjecrDemoCRS1.2\ProjectDemoCRS\bin\Debug\de\PdfSharp.resources.dll
+D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\1.Project\ProjectFile\ProjecrDemoCRS1.2\ProjectDemoCRS\bin\Debug\de\PdfSharp.Charting.resources.dll
