@@ -1,7 +1,7 @@
 ﻿Imports System.Data.OleDb
 Friend Structure TeacherRecord
     Dim staffNo, ic, name, email, phone, address1, address2, city As String
-    Dim district, state, gender As String
+    Dim district, postCode, gender As String
     Dim dob As Date
 End Structure
 
@@ -35,7 +35,7 @@ Public Class Teacher
                 teacherRec.address2 = dr("address2").ToString
                 teacherRec.city = dr("city").ToString
                 teacherRec.district = dr("district").ToString
-                teacherRec.state = dr("state").ToString
+                teacherRec.postCode = dr("postCode").ToString
                 teacherRec.gender = dr("gender").ToString
                 con.Close()
                 Return teacherRec
@@ -60,11 +60,11 @@ Public Class Teacher
                 MsgBox("error connecting to database")
                 Exit Function
             End If
-            sql = "insert into teacher(staffNumber, icNumber, name, dateOfBirth, gender, email, phoneNumber, address1, address2, city,district,state)"
+            sql = "insert into teacher(staffNumber, icNumber, name, dateOfBirth, gender, email, phoneNumber, address1, address2, city,district,postCode)"
             sql = sql & " values('" & newTeacherRec.staffNo & "','" & newTeacherRec.ic & "','" & newTeacherRec.name &
                 "','" & newTeacherRec.dob & "','" & newTeacherRec.gender & "','" & newTeacherRec.email & "','" & newTeacherRec.phone & "','" & newTeacherRec.address1 &
                 "','" & newTeacherRec.address2 & "','" & newTeacherRec.city &
-                "','" & newTeacherRec.district & "','" & newTeacherRec.state & "')"
+                "','" & newTeacherRec.district & "','" & newTeacherRec.postCode & "')"
 
             MessageBox.Show(sql)
             Debug.WriteLine(sql)
@@ -98,7 +98,7 @@ Public Class Teacher
             sql = sql & " address2 ='" & newTeacherRec.address2 & "',"
             sql = sql & " city ='" & newTeacherRec.city & "',"
             sql = sql & " district ='" & newTeacherRec.district & "',"
-            sql = sql & " state ='" & newTeacherRec.state & "'"
+            sql = sql & " postCode ='" & newTeacherRec.postCode & "'"
 
             sql = sql & " where staffNumber ='" & newTeacherRec.staffNo & "'"
             MessageBox.Show(sql)

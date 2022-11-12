@@ -127,4 +127,12 @@
         RegistrationForm.showStudentInformation(mMatricString)
         RegistrationForm.ShowDialog()
     End Sub
+
+    Private Sub Search_Enter(sender As Object, e As EventArgs) Handles Search.Enter
+
+    End Sub
+
+    Private Sub StudentDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles StudentDataGridView.CellContentClick
+
+    End Sub
 End Class

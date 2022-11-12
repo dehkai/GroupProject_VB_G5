@@ -52,27 +52,7 @@
         End With
     End Sub
 
-    Private Sub TeacherDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles TeacherDataGridView.CellContentClick
-        Dim cb As New OleDb.OleDbCommandBuilder(dataAdapter)
-        Dim col, inc As Integer
 
-        Try
-            col = TeacherDataGridView.CurrentCell.ColumnIndex
-            If col <> 0 Then
-                disableButton()
-                Exit Sub
-            End If
-            inc = TeacherDataGridView.CurrentCell.RowIndex
-            mStaffNoString = TeacherDataGridView.CurrentCell.Value
-            If (mStaffNoString <> "") Then
-                enableButton()
-            Else
-                disableButton()
-            End If
-        Catch ex As Exception
-            MessageBox.Show(ex.ToString)
-        End Try
-    End Sub
 
     Private Sub DeleteTeacherButton_Click(sender As Object, e As EventArgs) Handles DeleteTeacherButton.Click
         Dim dialogResult As MsgBoxResult
@@ -126,5 +106,27 @@
             TeacherForm.ShowDialog()
             displayAllTeacher()
         End If
+    End Sub
+
+    Private Sub TeacherDataGridView_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles TeacherDataGridView.CellClick
+        Dim cb As New OleDb.OleDbCommandBuilder(dataAdapter)
+        Dim col, inc As Integer
+
+        Try
+            col = TeacherDataGridView.CurrentCell.ColumnIndex
+            If col <> 0 Then
+                disableButton()
+                Exit Sub
+            End If
+            inc = TeacherDataGridView.CurrentCell.RowIndex
+            mStaffNoString = TeacherDataGridView.CurrentCell.Value
+            If (mStaffNoString <> "") Then
+                enableButton()
+            Else
+                disableButton()
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
     End Sub
 End Class

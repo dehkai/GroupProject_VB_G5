@@ -27,7 +27,7 @@
                 .Address2TextBox.Text = OldTeacherRec.address2
                 .CityTextBox.Text = OldTeacherRec.city
                 .DistrictTextBox.Text = OldTeacherRec.district
-                .StateTextBox.Text = OldTeacherRec.state
+                .PostCodeTextBox.Text = OldTeacherRec.postCode
                 displayGender(OldTeacherRec.gender)
             End With
         Catch ex As Exception
@@ -58,7 +58,7 @@
             .address2 = Address2TextBox.Text
             .city = CityTextBox.Text
             .district = DistrictTextBox.Text
-            .state = StateTextBox.Text
+            .postCode = PostCodeTextBox.Text
             .gender = getGenderFromRadioButton()
         End With
 
@@ -81,7 +81,7 @@
             .Address2TextBox.Clear()
             .CityTextBox.Clear()
             .DistrictTextBox.Clear()
-            .StateTextBox.Clear()
+            .PostCodeTextBox.Clear()
         End With
     End Sub
 
@@ -129,7 +129,7 @@
         theNewTeacherRec.address2 = Address2TextBox.Text
         theNewTeacherRec.city = CityTextBox.Text
         theNewTeacherRec.district = DistrictTextBox.Text
-        theNewTeacherRec.state = StateTextBox.Text
+        theNewTeacherRec.postCode = PostCodeTextBox.Text
         theNewTeacherRec.gender = getGenderFromRadioButton()
 
         updateOk = myTeacher.updateThisTeacher(oldTeacherRec, theNewTeacherRec)

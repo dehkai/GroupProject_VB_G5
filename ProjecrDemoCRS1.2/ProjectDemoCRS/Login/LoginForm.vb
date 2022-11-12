@@ -16,8 +16,16 @@ Public Class LoginForm
         'Dim valid = loginModel.checkLogin(user)
         Dim valid = loginModel.checkLogin(username, password)
         If (valid) Then
-            CrsMainForm.Show()
-            Me.Hide()
+            Dim usertype = loginModel.getUserType(username, password)
+            Debug.WriteLine(usertype)
+            If usertype = "Staff" Then
+                CrsMainForm.Show()
+                Me.Hide()
+            Else
+                StudentCrsMainForm.Show()
+                Me.Hide()
+            End If
+
         End If
     End Sub
 

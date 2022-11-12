@@ -31,4 +31,8 @@
     Private Sub UserListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UserListToolStripMenuItem.Click
         UserListForm.ShowDialog()
     End Sub
+
+    Private Sub ApplicationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApplicationToolStripMenuItem.Click
+
+    End Sub
 End Class

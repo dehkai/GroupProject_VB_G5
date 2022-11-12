@@ -1,5 +1,8 @@
 ﻿Imports System.Data.OleDb
+
 Public Class RegistrationForm
+    Dim count As Integer
+    Const CourseFee As Integer = 50
     Public conn As New OleDb.OleDbConnection
     Dim dbProvider As String
     Dim dbsource As String
@@ -10,12 +13,14 @@ Public Class RegistrationForm
     Dim ds As New DataSet
     Dim mId As String
     Public dr As OleDbDataReader
+    Public dr2 As OleDbDataReader
     Dim msubjectCodeString As String
 
     Dim mySubject As New Subject
     Public Sub showStudentInformation(matricString As String)
 
         displayStudentRecord(matricString)
+        'displayAddress(matricString)
         mId = matricString
         displaySubjectRegister(mId)
     End Sub
@@ -39,7 +44,9 @@ Public Class RegistrationForm
     End Sub
     Private Sub displaySubjectRegister(matricString As String)
         Dim dataAdapter2 As New OleDb.OleDbDataAdapter
-        Dim sql2 As String
+        Dim sql2, sql3, sql4 As String
+        Dim studentFee As Integer
+
         clearSubjectRegisterGrid()
         conn.Close()
         conn.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
@@ -56,15 +63,43 @@ Public Class RegistrationForm
         sql2 &= " and r.matricNumber = '" & matricString & "'"
         sql2 &= " and r.subjectCode = s.subjectCode"
 
-        Dim cmd As OleDbCommand = New OleDbCommand(sql2, conn)
-        dr = cmd.ExecuteReader
-        While dr.Read()
+        sql3 = "Select count(*)"
+        sql3 &= " from subjectregister r, student stu, subject s"
+        sql3 &= " where r.matricNumber = stu.matricNumber"
+        sql3 &= " and r.matricNumber = '" & matricString & "'"
+        sql3 &= " and r.subjectCode = s.subjectCode"
+
+        sql4 = "Select icNumber,address1, address2, city, district, postCode"
+        sql4 &= " from student "
+        sql4 &= " where matricNumber = '" & matricString & "'"
+
+        Debug.WriteLine(sql4)
+        Dim cmd3 As OleDbCommand = New OleDbCommand(sql4, conn)
+        dr2 = cmd3.ExecuteReader
+        While dr2.Read()
             With Me
-                .TotalCreditLabel.Text = dr("TotalCredit").ToString
+                .IcLabel.Text = dr2("icNumber").ToString
+                .Address1Label.Text = dr2("address1").ToString
+                .Address2Label.Text = dr2("address2").ToString
+                .postCodeLabel.Text = dr2("postCode").ToString
+                .cityLabel.Text = dr2("city").ToString
+                .DistrictLabel.Text = dr2("district").ToString
             End With
         End While
 
 
+        Dim cmd As OleDbCommand = New OleDbCommand(sql2, conn)
+        Dim cmd2 As OleDbCommand = New OleDbCommand(sql3, conn)
+        dr = cmd.ExecuteReader
+        count = Convert.ToInt32(cmd2.ExecuteScalar())
+        studentFee = count * CourseFee
+        While dr.Read()
+            With Me
+                .TotalCreditLabel.Text = dr("TotalCredit").ToString
+                .StudentFeeLabel.Text = studentFee.ToString("C")
+                .TotalSubjectLabel.Text = count.ToString
+            End With
+        End While
 
         MessageBox.Show(sql)
         Debug.WriteLine(sql)
@@ -150,6 +185,127 @@ Public Class RegistrationForm
     Private Sub GroupBox3_Enter(sender As Object, e As EventArgs) Handles GroupBox3.Enter
 
     End Sub
+
+    Private Sub Label8_Click(sender As Object, e As EventArgs) Handles StudentFeeLabel.Click
+
+    End Sub
+
+    Private Sub PrintSlipToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PrintSlipToolStripMenuItem.Click
+        If PrintPreviewDialog1.ShowDialog = DialogResult.OK Then
+            PrintDocument1.Print()
+        End If
+    End Sub
+
+    Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        'Dim companyLogo As Image =
+        '    Image.FromFile("D:\Data D\1.UTMSPACE\A-Sem 5\VB.NET PROGRAMMING\LAB SKILL 4\Lab4_4\ImageCar.jpg")
+        'e.Graphics.DrawImage(companyLogo, 100, 100, 400, 300)
+        Dim yPos As Integer
+        Dim titleString As String
+        Dim titleFOnt As New Font("Cambria", 15, FontStyle.Bold)
+        Dim dataFont As New Font("Cambria", 13, FontStyle.Regular)
+        Dim dataString As String
+
+        titleString = DateTime.Now.ToString + ControlChars.Tab + ControlChars.Tab + "Registration Slip"
+        yPos = 20
+        e.Graphics.DrawString(titleString, titleFOnt, Brushes.Black, 10, yPos)
+
+        dataString = ControlChars.Tab + ControlChars.Tab + ControlChars.Tab + "SEKOLAH MENENGAH  KEBANGSAAN"
+        yPos = 100
+        e.Graphics.DrawString(dataString, titleFOnt, Brushes.Black, 1, yPos)
+        dataString = ControlChars.Tab + ControlChars.Tab + ControlChars.Tab + "68100 , PETALING JAYA , SELANGOR,"
+        yPos += 30
+        e.Graphics.DrawString(dataString, dataFont, Brushes.Black, 80, yPos)
+        dataString = ControlChars.Tab + ControlChars.Tab + ControlChars.Tab + "MALAYSIA"
+        yPos += 30
+        e.Graphics.DrawString(dataString, dataFont, Brushes.Black, 140, yPos)
+        dataString = ControlChars.Tab + ControlChars.Tab + ControlChars.Tab + "(Student Registration Slip)"
+        yPos += 50
+        e.Graphics.DrawString(dataString, titleFOnt, Brushes.Black, 40, yPos)
+        dataString = "Name:" + ControlChars.Tab + ControlChars.Tab + nameLabel.Text.ToString()
+        yPos += 50
+        e.Graphics.DrawString(dataString, dataFont, Brushes.Black, 100, yPos)
+        dataString = "No. IC:" + ControlChars.Tab + ControlChars.Tab + IcLabel.Text.ToString()
+        yPos += 30
+        e.Graphics.DrawString(dataString, dataFont, Brushes.Black, 100, yPos)
+        dataString = "Address:" + ControlChars.Tab + ControlChars.Tab + Address1Label.Text.ToString + ", "
+        yPos += 30
+        e.Graphics.DrawString(dataString, dataFont, Brushes.Black, 100, yPos)
+        dataString = ControlChars.Tab + ControlChars.Tab + ControlChars.Tab + Address2Label.Text.ToString + ", "
+        yPos += 30
+        e.Graphics.DrawString(dataString, dataFont, Brushes.Black, 25, yPos)
+        dataString = ControlChars.Tab + ControlChars.Tab + ControlChars.Tab + postCodeLabel.Text.ToString + ", " + DistrictLabel.Text.ToString + "," + cityLabel.Text.ToString() + ". "
+        yPos += 30
+        e.Graphics.DrawString(dataString, dataFont, Brushes.Black, 25, yPos)
+
+
+        dataString = "Bill" + ControlChars.Tab + "   CODE" + ControlChars.Tab + "    CREDIT" + ControlChars.Tab + ControlChars.Tab + ControlChars.Tab + "NAME"
+        yPos += 50
+        e.Graphics.DrawString(dataString, titleFOnt, Brushes.Black, 30, yPos)
+        Dim newInt As Integer
+        For a = 0 To count - 1
+            newInt = a + 1
+            dataString = newInt.ToString + ControlChars.Tab + SubjectRegisterDataGridView.Rows(a).Cells(0).Value.ToString() + ControlChars.Tab + SubjectRegisterDataGridView.Rows(a).Cells(2).Value.ToString() + ControlChars.Tab + SubjectRegisterDataGridView.Rows(a).Cells(1).Value.ToString()
+
+            yPos += 30
+            e.Graphics.DrawString(dataString, dataFont, Brushes.Black, 40, yPos)
+        Next
+
+
+        dataString = "TOTAL CREDIT" + ControlChars.Tab + ControlChars.Tab + TotalCreditLabel.Text.ToString()
+        yPos += 50
+        e.Graphics.DrawString(dataString, titleFOnt, Brushes.Black, 100, yPos)
+        dataString = "TOTAL FEES" + ControlChars.Tab + ControlChars.Tab + StudentFeeLabel.Text.ToString()
+        yPos += 30
+        e.Graphics.DrawString(dataString, titleFOnt, Brushes.Black, 100, yPos)
+        'yPos += 30
+        'Dim linepen As New Pen(Color.Black, 5)
+        'Dim startPoint As New Point(100, yPos)
+        'Dim endPoint As New Point(600, yPos)
+        'e.Graphics.DrawLine(linepen, startPoint, endPoint)
+
+        'Dim linepen2 As New Pen(Color.Black, 5)
+
+        'startPoint.X = 100
+        'startPoint.Y = yPos
+        'endPoint.X = 600
+        'endPoint.Y = yPos
+        'e.Graphics.DrawLine(linepen, startPoint, endPoint)
+    End Sub
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
+
+    'Public Sub displayAddress(matricString As String)
+    '    Dim dataAdapter2 As New OleDb.OleDbDataAdapter
+    '    Dim sql2 As String
+    '    clearSubjectRegisterGrid()
+    '    conn.Close()
+    '    conn.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
+    '    conn.Open()
+    '    sql2 = "Select address1, address2, city, district, state"
+    '    sql2 &= " from subjectregister "
+    '    sql2 &= " where matricNumber = '" & matricString & "'"
+
+    '    Debug.WriteLine(sql2)
+    '    Dim cmd As OleDbCommand = New OleDbCommand(sql2, conn)
+    '    dr = cmd.ExecuteReader
+    '    While dr.Read()
+    '        With Me
+    '            .Address1Label.Text = dr("address1").ToString
+    '            .Address2Label.Text = dr("address2").ToString
+    '            .CityLabel.Text = dr("city").ToString
+    '            .DistrictLabel.Text = dr("district").ToString
+    '            .StateLabel.Text = dr("state").ToString
+    '        End With
+    '    End While
+
+    '    MessageBox.Show(sql)
+    '    Debug.WriteLine(sql)
+
+
+    'End Sub
 
     Private Sub RegistrationForm_Load(sender As Object, e As EventArgs) Handles Me.Load
         openConnection()
