@@ -35,4 +35,14 @@
     Private Sub ApplicationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApplicationToolStripMenuItem.Click
 
     End Sub
+
+    Private Sub StudentInformationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StudentInformationToolStripMenuItem.Click
+        StudentListForm.ShowDialog()
+    End Sub
+
+    Private Sub StafInformationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StafInformationToolStripMenuItem.Click
+        TeacherForm.Show()
+        TeacherForm.AddUpdateButton.Text = "Add"
+    End Sub
+
 End Class

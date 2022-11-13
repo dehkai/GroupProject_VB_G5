@@ -6,11 +6,12 @@
 
 
     Friend Sub prepareToUpdateStudent(studentMatric As String)
-        MessageBox.Show("to update studnet with matric" & studentMatric)
+        MessageBox.Show("to update student with matric" & studentMatric)
         With Me
             .AddUpdateButton.Text = "Update"
         End With
         displayExistingStudentInfo(studentMatric)
+
     End Sub
 
     Private Sub displayExistingStudentInfo(studentMatric As String)
@@ -20,12 +21,20 @@
                 .icNumberTextBox.Text = OldStudentRec.ic
                 .matricTextBox.Text = OldStudentRec.matric
                 .nameTextBox.Text = OldStudentRec.name
-                MessageBox.Show(OldStudentRec.dob.Date.ToString)
+                ' MessageBox.Show(OldStudentRec.dob.Date.ToString)
+                .courseTextBox.Text = OldStudentRec.course
                 'displayLevel(OldStudentGroupRec.groupLevel) 'to check suitable radio button
                 '.dobDateTimePicker1.CustomFormat = "dd-MM-yyyy"
                 .dobDateTimePicker1.Value = OldStudentRec.dob.Date
                 .PhoneNumberTextBox.Text = OldStudentRec.phone
                 .classComboBox.Text = OldStudentRec.classGroup
+                .emailTextBox.Text = OldStudentRec.email
+                .Address1TextBox.Text = OldStudentRec.address1
+                .Address2TextBox.Text = OldStudentRec.address2
+                .CityTextBox.Text = OldStudentRec.city
+                .DistrictTextBox.Text = OldStudentRec.district
+                .PostCodeTextBox.Text = OldStudentRec.postCode
+                displayGender(OldStudentRec.gender)
 
             End With
         Catch ex As Exception
@@ -71,8 +80,17 @@
             .ic = icNumberTextBox.Text
             .matric = matricTextBox.Text
             .name = nameTextBox.Text
+            .course = courseTextBox.Text
             .dob = dobDateTimePicker1.Value
             .classGroup = classComboBox.Text
+            .phone = PhoneNumberTextBox.Text
+            .email = emailTextBox.Text
+            .address1 = Address1TextBox.Text
+            .address2 = Address2TextBox.Text
+            .city = CityTextBox.Text
+            .district = DistrictTextBox.Text
+            .postCode = PostCodeTextBox.Text
+            .gender = getGenderFromRadioButton()
         End With
 
         addOk = myStudent.addStudent(theNewStudentRec)
@@ -87,6 +105,14 @@
             .matricTextBox.Clear()
             .icNumberTextBox.Clear()
             .nameTextBox.Clear()
+            .courseTextBox.Clear()
+            .PhoneNumberTextBox.Clear()
+            .emailTextBox.Clear()
+            .Address1TextBox.Clear()
+            .Address2TextBox.Clear()
+            .CityTextBox.Clear()
+            .DistrictTextBox.Clear()
+            .PostCodeTextBox.Clear()
 
             .classComboBox.Text = ""
         End With
@@ -102,8 +128,17 @@
         theNewStudentRec.matric = matricTextBox.Text
         theNewStudentRec.ic = icNumberTextBox.Text
         theNewStudentRec.name = nameTextBox.Text
+        theNewStudentRec.course = courseTextBox.Text
         theNewStudentRec.dob = dobDateTimePicker1.Value
         theNewStudentRec.classGroup = classComboBox.Text
+        theNewStudentRec.phone = PhoneNumberTextBox.Text
+        theNewStudentRec.email = emailTextBox.Text
+        theNewStudentRec.address1 = Address1TextBox.Text
+        theNewStudentRec.address2 = Address2TextBox.Text
+        theNewStudentRec.city = CityTextBox.Text
+        theNewStudentRec.district = DistrictTextBox.Text
+        theNewStudentRec.postCode = PostCodeTextBox.Text
+        theNewStudentRec.gender = getGenderFromRadioButton()
         updateOk = myStudent.updateThisStudent(oldStudentRec, theNewStudentRec)
         If updateOk Then
             messageString = "Student with matric : " & theNewStudentRec.matric & " has been updated"
@@ -112,13 +147,29 @@
         End If
     End Sub
 
+    Private Function getGenderFromRadioButton() As String
+        If MaleRadioButton.Checked Then
+            Return "MALE"
+        Else
+            Return "FEMALE"
+        End If
+    End Function
+
+    Private Sub displayGender(gender As String)
+        If gender = "MALE" Then
+            MaleRadioButton.Checked = True
+        Else
+            FemaleRadioButton.Checked = True
+        End If
+
+    End Sub
+
+    Private Sub clearButton_Click(sender As Object, e As EventArgs) Handles clearButton.Click
+        clearStudentForm()
+    End Sub
+
     Private Sub dobDateTimePicker1_ValueChanged(sender As Object, e As EventArgs) Handles dobDateTimePicker1.ValueChanged
-        'MessageBox.Show(dobDateTimePicker1.Value.ToString("dd-MM-yyyy"))
-        MessageBox.Show(dobDateTimePicker1.Value.ToShortDateString)
-
+        'MessageBox.Show(dobDateTimePicker1.Value.ToShortDateString)
     End Sub
 
-    Private Sub StudentForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 End Class
