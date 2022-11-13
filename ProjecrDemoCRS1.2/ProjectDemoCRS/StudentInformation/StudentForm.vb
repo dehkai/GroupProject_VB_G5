@@ -6,7 +6,6 @@
 
 
     Friend Sub prepareToUpdateStudent(studentMatric As String)
-        MessageBox.Show("to update student with matric" & studentMatric)
         With Me
             .AddUpdateButton.Text = "Update"
         End With

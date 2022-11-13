@@ -96,7 +96,7 @@ Public Class UserListForm
             cmd.ExecuteNonQuery()
             conn.Close()
             MessageBox.Show("Record Deleted", "Paragon Private and International School Database", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            viewer()
+            updateTable()
             UsernameTextBox.Text = ""
             PasswordTextBox.Text = ""
             UserLevelTextBox.Text = ""

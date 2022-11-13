@@ -13,7 +13,6 @@
             'opens the connection
             conn.Open()
             If conn.State = ConnectionState.Open Then
-                MsgBox("MS Database Connected!")
                 displayAllTeacher()
             End If
         Catch ex As Exception
@@ -30,6 +29,8 @@
         dataAdapter.Fill(ds, "ihsanTuitionCenterDb")
         Me.TeacherDataGridView.DataMember = "ihsanTuitionCenterDb"
         TeacherDataGridView.DataSource = ds
+        TeacherDataGridView.ColumnHeadersDefaultCellStyle.Font = New Font("Microsoft Sans Serif", 10.0F)
+        TeacherDataGridView.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 10.0F)
     End Sub
 
     Private Sub clearTeacherGrid()

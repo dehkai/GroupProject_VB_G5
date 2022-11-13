@@ -19,7 +19,6 @@ Public Class StudentGroupListForm
             'opens the connection
             conn.Open()
             If conn.State = ConnectionState.Open Then
-                MsgBox("MS Database Connected!")
                 displayAllStudentGroup()
             End If
         Catch ex As Exception
@@ -35,6 +34,12 @@ Public Class StudentGroupListForm
         dataAdapter.Fill(ds, "ihsanTuitionCenterDb")
         Me.StudentGroupDataGridView.DataMember = "ihsanTuitionCenterDb"
         StudentGroupDataGridView.DataSource = ds
+        StudentGroupDataGridView.Columns(0).Width = 260
+        StudentGroupDataGridView.Columns(1).Width = 260
+        StudentGroupDataGridView.Columns(2).Width = 260
+        StudentGroupDataGridView.Columns(3).Width = 255
+        StudentGroupDataGridView.ColumnHeadersDefaultCellStyle.Font = New Font("Microsoft Sans Serif", 12.0F)
+        StudentGroupDataGridView.DefaultCellStyle.Font = New Font("Microsoft Sans Serif", 12.0F)
     End Sub
     Private Sub clearStudentGrid()
         Me.ds.Clear() 'clear the original data

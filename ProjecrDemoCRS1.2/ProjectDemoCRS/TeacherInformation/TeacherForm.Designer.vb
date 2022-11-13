@@ -87,11 +87,11 @@ Partial Class TeacherForm
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.GroupBox1.Location = New System.Drawing.Point(291, 71)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(9, 9, 9, 9)
+        Me.GroupBox1.Location = New System.Drawing.Point(194, 46)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(9, 9, 9, 9)
-        Me.GroupBox1.Size = New System.Drawing.Size(1023, 1093)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(6, 6, 6, 6)
+        Me.GroupBox1.Size = New System.Drawing.Size(682, 710)
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Teacher Information"
@@ -99,19 +99,17 @@ Partial Class TeacherForm
         'dobDateTimePicker1
         '
         Me.dobDateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dobDateTimePicker1.Location = New System.Drawing.Point(310, 263)
-        Me.dobDateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.dobDateTimePicker1.Location = New System.Drawing.Point(207, 171)
         Me.dobDateTimePicker1.Name = "dobDateTimePicker1"
-        Me.dobDateTimePicker1.Size = New System.Drawing.Size(388, 30)
+        Me.dobDateTimePicker1.Size = New System.Drawing.Size(260, 23)
         Me.dobDateTimePicker1.TabIndex = 38
         '
         'clearButton
         '
         Me.clearButton.BackColor = System.Drawing.Color.PowderBlue
-        Me.clearButton.Location = New System.Drawing.Point(684, 986)
-        Me.clearButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.clearButton.Location = New System.Drawing.Point(456, 641)
         Me.clearButton.Name = "clearButton"
-        Me.clearButton.Size = New System.Drawing.Size(152, 69)
+        Me.clearButton.Size = New System.Drawing.Size(101, 45)
         Me.clearButton.TabIndex = 37
         Me.clearButton.Text = "Clear"
         Me.clearButton.UseVisualStyleBackColor = False
@@ -119,9 +117,10 @@ Partial Class TeacherForm
         'MaleRadioButton
         '
         Me.MaleRadioButton.AutoSize = True
-        Me.MaleRadioButton.Location = New System.Drawing.Point(523, 869)
+        Me.MaleRadioButton.Location = New System.Drawing.Point(349, 565)
+        Me.MaleRadioButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.MaleRadioButton.Name = "MaleRadioButton"
-        Me.MaleRadioButton.Size = New System.Drawing.Size(80, 29)
+        Me.MaleRadioButton.Size = New System.Drawing.Size(56, 21)
         Me.MaleRadioButton.TabIndex = 36
         Me.MaleRadioButton.TabStop = True
         Me.MaleRadioButton.Text = "Male"
@@ -130,9 +129,10 @@ Partial Class TeacherForm
         'FemaleRadioButton
         '
         Me.FemaleRadioButton.AutoSize = True
-        Me.FemaleRadioButton.Location = New System.Drawing.Point(313, 869)
+        Me.FemaleRadioButton.Location = New System.Drawing.Point(209, 565)
+        Me.FemaleRadioButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.FemaleRadioButton.Name = "FemaleRadioButton"
-        Me.FemaleRadioButton.Size = New System.Drawing.Size(102, 29)
+        Me.FemaleRadioButton.Size = New System.Drawing.Size(72, 21)
         Me.FemaleRadioButton.TabIndex = 35
         Me.FemaleRadioButton.TabStop = True
         Me.FemaleRadioButton.Text = "Female"
@@ -141,164 +141,146 @@ Partial Class TeacherForm
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(23, 869)
-        Me.Label13.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label13.Location = New System.Drawing.Point(15, 565)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(77, 25)
+        Me.Label13.Size = New System.Drawing.Size(56, 17)
         Me.Label13.TabIndex = 34
         Me.Label13.Text = "Gender"
         '
         'PostCodeTextBox
         '
-        Me.PostCodeTextBox.Location = New System.Drawing.Point(310, 614)
-        Me.PostCodeTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PostCodeTextBox.Location = New System.Drawing.Point(207, 399)
         Me.PostCodeTextBox.Name = "PostCodeTextBox"
-        Me.PostCodeTextBox.Size = New System.Drawing.Size(391, 30)
+        Me.PostCodeTextBox.Size = New System.Drawing.Size(262, 23)
         Me.PostCodeTextBox.TabIndex = 33
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(20, 614)
-        Me.Label12.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label12.Location = New System.Drawing.Point(13, 399)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(94, 25)
+        Me.Label12.Size = New System.Drawing.Size(67, 17)
         Me.Label12.TabIndex = 32
         Me.Label12.Text = "Postcode"
         '
         'DistrictTextBox
         '
-        Me.DistrictTextBox.Location = New System.Drawing.Point(310, 773)
-        Me.DistrictTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.DistrictTextBox.Location = New System.Drawing.Point(207, 502)
         Me.DistrictTextBox.Name = "DistrictTextBox"
-        Me.DistrictTextBox.Size = New System.Drawing.Size(391, 30)
+        Me.DistrictTextBox.Size = New System.Drawing.Size(262, 23)
         Me.DistrictTextBox.TabIndex = 31
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(20, 773)
-        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label11.Location = New System.Drawing.Point(13, 502)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(70, 25)
+        Me.Label11.Size = New System.Drawing.Size(51, 17)
         Me.Label11.TabIndex = 30
         Me.Label11.Text = "District"
         '
         'CityTextBox
         '
-        Me.CityTextBox.Location = New System.Drawing.Point(310, 690)
-        Me.CityTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CityTextBox.Location = New System.Drawing.Point(207, 448)
         Me.CityTextBox.Name = "CityTextBox"
-        Me.CityTextBox.Size = New System.Drawing.Size(391, 30)
+        Me.CityTextBox.Size = New System.Drawing.Size(262, 23)
         Me.CityTextBox.TabIndex = 29
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(20, 690)
-        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Location = New System.Drawing.Point(13, 448)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(46, 25)
+        Me.Label10.Size = New System.Drawing.Size(31, 17)
         Me.Label10.TabIndex = 28
         Me.Label10.Text = "City"
         '
         'Address2TextBox
         '
-        Me.Address2TextBox.Location = New System.Drawing.Point(312, 538)
-        Me.Address2TextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Address2TextBox.Location = New System.Drawing.Point(208, 350)
         Me.Address2TextBox.Name = "Address2TextBox"
-        Me.Address2TextBox.Size = New System.Drawing.Size(391, 30)
+        Me.Address2TextBox.Size = New System.Drawing.Size(262, 23)
         Me.Address2TextBox.TabIndex = 27
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(22, 538)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.Location = New System.Drawing.Point(15, 350)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(95, 25)
+        Me.Label9.Size = New System.Drawing.Size(67, 17)
         Me.Label9.TabIndex = 26
         Me.Label9.Text = "Addess 2"
         '
         'Address1TextBox
         '
-        Me.Address1TextBox.Location = New System.Drawing.Point(312, 468)
-        Me.Address1TextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.Address1TextBox.Location = New System.Drawing.Point(208, 304)
         Me.Address1TextBox.Name = "Address1TextBox"
-        Me.Address1TextBox.Size = New System.Drawing.Size(391, 30)
+        Me.Address1TextBox.Size = New System.Drawing.Size(262, 23)
         Me.Address1TextBox.TabIndex = 25
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(22, 468)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(15, 304)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(95, 25)
+        Me.Label8.Size = New System.Drawing.Size(67, 17)
         Me.Label8.TabIndex = 24
         Me.Label8.Text = "Addess 1"
         '
         'emailTextBox
         '
-        Me.emailTextBox.Location = New System.Drawing.Point(312, 406)
-        Me.emailTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.emailTextBox.Location = New System.Drawing.Point(208, 264)
         Me.emailTextBox.Name = "emailTextBox"
-        Me.emailTextBox.Size = New System.Drawing.Size(391, 30)
+        Me.emailTextBox.Size = New System.Drawing.Size(262, 23)
         Me.emailTextBox.TabIndex = 23
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(22, 406)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(15, 264)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(60, 25)
+        Me.Label4.Size = New System.Drawing.Size(42, 17)
         Me.Label4.TabIndex = 22
         Me.Label4.Text = "Email"
         '
         'nameTextBox
         '
-        Me.nameTextBox.Location = New System.Drawing.Point(310, 198)
-        Me.nameTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.nameTextBox.Location = New System.Drawing.Point(207, 129)
         Me.nameTextBox.Name = "nameTextBox"
-        Me.nameTextBox.Size = New System.Drawing.Size(391, 30)
+        Me.nameTextBox.Size = New System.Drawing.Size(262, 23)
         Me.nameTextBox.TabIndex = 20
         '
         'PhoneNumberTextBox
         '
-        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(310, 334)
-        Me.PhoneNumberTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.PhoneNumberTextBox.Location = New System.Drawing.Point(207, 217)
         Me.PhoneNumberTextBox.Name = "PhoneNumberTextBox"
-        Me.PhoneNumberTextBox.Size = New System.Drawing.Size(391, 30)
+        Me.PhoneNumberTextBox.Size = New System.Drawing.Size(262, 23)
         Me.PhoneNumberTextBox.TabIndex = 16
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(20, 334)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(13, 217)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(143, 25)
+        Me.Label6.Size = New System.Drawing.Size(103, 17)
         Me.Label6.TabIndex = 15
         Me.Label6.Text = "Phone Number"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(20, 268)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(13, 174)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(116, 25)
+        Me.Label5.Size = New System.Drawing.Size(86, 17)
         Me.Label5.TabIndex = 13
         Me.Label5.Text = "Date of birth"
         '
         'CancelButton
         '
         Me.CancelButton.BackColor = System.Drawing.Color.PowderBlue
-        Me.CancelButton.Location = New System.Drawing.Point(490, 986)
-        Me.CancelButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.CancelButton.Location = New System.Drawing.Point(327, 641)
         Me.CancelButton.Name = "CancelButton"
-        Me.CancelButton.Size = New System.Drawing.Size(152, 69)
+        Me.CancelButton.Size = New System.Drawing.Size(101, 45)
         Me.CancelButton.TabIndex = 7
         Me.CancelButton.Text = "Cancel"
         Me.CancelButton.UseVisualStyleBackColor = False
@@ -306,71 +288,66 @@ Partial Class TeacherForm
         'AddUpdateButton
         '
         Me.AddUpdateButton.BackColor = System.Drawing.Color.PowderBlue
-        Me.AddUpdateButton.Location = New System.Drawing.Point(312, 986)
-        Me.AddUpdateButton.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.AddUpdateButton.Location = New System.Drawing.Point(208, 641)
         Me.AddUpdateButton.Name = "AddUpdateButton"
-        Me.AddUpdateButton.Size = New System.Drawing.Size(146, 69)
+        Me.AddUpdateButton.Size = New System.Drawing.Size(97, 45)
         Me.AddUpdateButton.TabIndex = 6
         Me.AddUpdateButton.Text = "Button1"
         Me.AddUpdateButton.UseVisualStyleBackColor = False
         '
         'icNumberTextBox
         '
-        Me.icNumberTextBox.Location = New System.Drawing.Point(310, 134)
-        Me.icNumberTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.icNumberTextBox.Location = New System.Drawing.Point(207, 87)
         Me.icNumberTextBox.Name = "icNumberTextBox"
-        Me.icNumberTextBox.Size = New System.Drawing.Size(391, 30)
+        Me.icNumberTextBox.Size = New System.Drawing.Size(262, 23)
         Me.icNumberTextBox.TabIndex = 4
         '
         'StaffNoTextBox
         '
-        Me.StaffNoTextBox.Location = New System.Drawing.Point(310, 68)
-        Me.StaffNoTextBox.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
+        Me.StaffNoTextBox.Location = New System.Drawing.Point(207, 44)
         Me.StaffNoTextBox.Name = "StaffNoTextBox"
-        Me.StaffNoTextBox.Size = New System.Drawing.Size(391, 30)
+        Me.StaffNoTextBox.Size = New System.Drawing.Size(262, 23)
         Me.StaffNoTextBox.TabIndex = 3
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(20, 205)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(13, 133)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 25)
+        Me.Label3.Size = New System.Drawing.Size(45, 17)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "Name"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(20, 134)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(13, 87)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(101, 25)
+        Me.Label2.Size = New System.Drawing.Size(72, 17)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Ic Number"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(20, 69)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(13, 45)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(126, 25)
+        Me.Label1.Size = New System.Drawing.Size(91, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Staff Number"
         '
         'TeacherForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.BackColor = System.Drawing.SystemColors.Info
-        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(1446, 1182)
+        Me.BackColor = System.Drawing.Color.SeaShell
+        Me.ClientSize = New System.Drawing.Size(964, 781)
         Me.Controls.Add(Me.GroupBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "TeacherForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Teacher Form"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

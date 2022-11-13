@@ -117,7 +117,7 @@ Partial Class RegistrationForm
         Me.Label11.Location = New System.Drawing.Point(35, 123)
         Me.Label11.Name = "Label11"
         Me.Label11.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.Label11.Size = New System.Drawing.Size(48, 37)
+        Me.Label11.Size = New System.Drawing.Size(32, 25)
         Me.Label11.TabIndex = 16
         Me.Label11.Text = "IC"
         '
@@ -134,7 +134,7 @@ Partial Class RegistrationForm
         Me.Label18.AutoSize = True
         Me.Label18.Location = New System.Drawing.Point(478, 210)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(115, 37)
+        Me.Label18.Size = New System.Drawing.Size(78, 25)
         Me.Label18.TabIndex = 14
         Me.Label18.Text = "District"
         '
@@ -151,7 +151,7 @@ Partial Class RegistrationForm
         Me.Label16.AutoSize = True
         Me.Label16.Location = New System.Drawing.Point(478, 158)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(71, 37)
+        Me.Label16.Size = New System.Drawing.Size(49, 25)
         Me.Label16.TabIndex = 12
         Me.Label16.Text = "City"
         '
@@ -168,7 +168,7 @@ Partial Class RegistrationForm
         Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(478, 69)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(162, 37)
+        Me.Label12.Size = New System.Drawing.Size(109, 25)
         Me.Label12.TabIndex = 10
         Me.Label12.Text = "Address 2"
         '
@@ -193,7 +193,7 @@ Partial Class RegistrationForm
         Me.Label13.AutoSize = True
         Me.Label13.Location = New System.Drawing.Point(478, 114)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(150, 37)
+        Me.Label13.Size = New System.Drawing.Size(102, 25)
         Me.Label13.TabIndex = 8
         Me.Label13.Text = "Postcode"
         '
@@ -202,7 +202,7 @@ Partial Class RegistrationForm
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(478, 29)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(160, 37)
+        Me.Label9.Size = New System.Drawing.Size(109, 25)
         Me.Label9.TabIndex = 8
         Me.Label9.Text = "Address 1"
         '
@@ -243,7 +243,7 @@ Partial Class RegistrationForm
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(35, 207)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(120, 37)
+        Me.Label3.Size = New System.Drawing.Size(81, 25)
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Course"
         '
@@ -252,7 +252,7 @@ Partial Class RegistrationForm
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(35, 167)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(108, 37)
+        Me.Label4.Size = New System.Drawing.Size(73, 25)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Status"
         '
@@ -261,7 +261,7 @@ Partial Class RegistrationForm
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(35, 84)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(103, 37)
+        Me.Label2.Size = New System.Drawing.Size(68, 25)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Name"
         '
@@ -270,7 +270,7 @@ Partial Class RegistrationForm
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(35, 44)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(228, 37)
+        Me.Label1.Size = New System.Drawing.Size(152, 25)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Matric Number"
         '
@@ -293,7 +293,7 @@ Partial Class RegistrationForm
         Me.Label5.AutoSize = True
         Me.Label5.Location = New System.Drawing.Point(838, 17)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(396, 37)
+        Me.Label5.Size = New System.Drawing.Size(266, 25)
         Me.Label5.TabIndex = 5
         Me.Label5.Text = "Enter Subject Code to Add"
         '
@@ -301,7 +301,7 @@ Partial Class RegistrationForm
         '
         Me.SubjectCodeTextBox.Location = New System.Drawing.Point(887, 45)
         Me.SubjectCodeTextBox.Name = "SubjectCodeTextBox"
-        Me.SubjectCodeTextBox.Size = New System.Drawing.Size(175, 43)
+        Me.SubjectCodeTextBox.Size = New System.Drawing.Size(175, 31)
         Me.SubjectCodeTextBox.TabIndex = 4
         '
         'AddSubjectButton
@@ -363,7 +363,7 @@ Partial Class RegistrationForm
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(420, 28)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(204, 37)
+        Me.Label8.Size = New System.Drawing.Size(138, 25)
         Me.Label8.TabIndex = 4
         Me.Label8.Text = "Total Subject"
         '
@@ -388,7 +388,7 @@ Partial Class RegistrationForm
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(232, 28)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(192, 37)
+        Me.Label7.Size = New System.Drawing.Size(128, 25)
         Me.Label7.TabIndex = 1
         Me.Label7.Text = "Fee Amount"
         '
@@ -397,25 +397,24 @@ Partial Class RegistrationForm
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(37, 28)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(199, 37)
+        Me.Label6.Size = New System.Drawing.Size(134, 25)
         Me.Label6.TabIndex = 0
         Me.Label6.Text = "Total Credits"
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(24, 24)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PrintSlipToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1205, 33)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1205, 24)
         Me.MenuStrip1.TabIndex = 9
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'PrintSlipToolStripMenuItem
         '
         Me.PrintSlipToolStripMenuItem.Name = "PrintSlipToolStripMenuItem"
-        Me.PrintSlipToolStripMenuItem.Size = New System.Drawing.Size(98, 29)
+        Me.PrintSlipToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
         Me.PrintSlipToolStripMenuItem.Text = "Print Slip"
         '
         'PrintDocument1
@@ -451,7 +450,7 @@ Partial Class RegistrationForm
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(1013, 69)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(97, 37)
+        Me.Label10.Size = New System.Drawing.Size(65, 25)
         Me.Label10.TabIndex = 11
         Me.Label10.Text = "Email"
         '
@@ -465,7 +464,7 @@ Partial Class RegistrationForm
         '
         'RegistrationForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(19.0!, 37.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.Ivory
         Me.ClientSize = New System.Drawing.Size(1205, 669)
@@ -481,6 +480,7 @@ Partial Class RegistrationForm
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(6)
         Me.Name = "RegistrationForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "RegistrationForm"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()

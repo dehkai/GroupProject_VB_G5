@@ -31,7 +31,6 @@ Public Class RegistrationForm
         openConnection()
         Dim str As String
         str = "SELECT * FROM student WHERE (matricNumber = '" & matricString & "')"
-        MessageBox.Show(str)
         Dim cmd As OleDbCommand = New OleDbCommand(str, conn)
         dr = cmd.ExecuteReader
         While dr.Read()
@@ -104,7 +103,6 @@ Public Class RegistrationForm
             End With
         End While
 
-        MessageBox.Show(sql)
         Debug.WriteLine(sql)
 
         dataAdapter = New OleDb.OleDbDataAdapter(sql, conn)

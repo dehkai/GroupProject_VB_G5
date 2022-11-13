@@ -27,7 +27,6 @@
         End With
     End Sub
     Friend Sub prepareToUpdateStudentGroup(studentGroupId As String)
-        MessageBox.Show("to update groupid" & studentGroupId)
         With Me
             .AddUpdateButton.Text = "Update"
         End With
